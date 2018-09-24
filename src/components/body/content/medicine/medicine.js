@@ -270,7 +270,7 @@ class Medicine extends Component {
                                 </button>
                             </div>
                             <div class="modal-body text-danger">
-                                Failed to Submit. Validation Failed!
+                                Validation Failed!
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
