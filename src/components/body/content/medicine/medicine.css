@@ -1,11 +1,25 @@
 .carddeliverydetails{
     margin-left: 15px;
     margin-right: 15px;
+    /* margin-top : 10px;
+    margin-bottom: 10px; */
 }
 
 .cardprescriptiondetails{
     margin-left: 15px;
     margin-right: 15px;
+    /* margin-top : 10px;
+    margin-bottom: 10px; */
+}
+
+.carddeliverydetailsparent{
+    margin-top : 10px;
+    margin-bottom: 10px;
+}
+
+.cardprescriptiondetailsparent{
+    margin-top : 10px;
+    margin-bottom: 10px;
 }
 
 .carddisclaimer{
