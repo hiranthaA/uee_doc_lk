@@ -213,7 +213,7 @@ class Medicine extends Component {
                                             <div className="col-xl-12, col-lg-12 col-md-12 col-sm-12 col-12">
                                                 <div className="row">
                                                     <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                                        <input type="file" class="form-control-file border" id="uploadpress" onChange={this.handleChange} />
+                                                        <input type="file" accept="image/*" class="form-control-file border" id="uploadpress" onChange={this.handleChange} />
                                                     </div>
                                                 </div>
                                                 <br />
