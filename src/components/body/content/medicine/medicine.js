@@ -179,17 +179,19 @@ class Medicine extends Component {
                                         <div className="row">
                                             <div className="col-xl-12, col-lg-12 col-md-12 col-sm-12 col-12">
                                                 <div className="row">
-                                                    <div className="col-xl-4, col-lg-4 col-md-4 col-sm-4 col-7 text-left">
+                                                    <div className="radioAcc col-xl-4, col-lg-5 col-md-7 col-sm-7 col-7 text-left">
                                                         <div className="form-check-inline">
-                                                            <label class="form-check-label active">
+                                                            <label className="container form-check-label">
                                                                 <input type="radio" class="form-check-input" id="radioacc" name="optradio" checked={this.state.selectedOption === 'radioacc'} onClick={this.loadDeliveryDetails} />From Account
+                                                                <span className="checkmark"></span>
                                                             </label>
                                                         </div>
                                                     </div>
-                                                    <div className="col-xl-8, col-lg-8 col-md-8 col-sm-8 col-5 text-left">
+                                                    <div className="radioOther col-xl-8, col-lg-7 col-md-5 col-sm-5 col-5 text-left">
                                                         <div className="form-check-inline">
-                                                            <label class="form-check-label">
+                                                            <label className="container form-check-label">
                                                                 <input type="radio" class="form-check-input" id="radioother" name="optradio" checked={this.state.selectedOption === 'radioother'} onClick={this.loadDeliveryDetails} />Other
+                                                                <span className="checkmark"></span>
                                                             </label>
                                                         </div>
                                                     </div>
