@@ -66,6 +66,7 @@ class Medicine extends Component {
                     </div>
                 </div>
                 <br />
+                {/*top heading area*/}
                 <div className="row">
                     <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <h2>Get your medication delivered</h2>
@@ -81,22 +82,23 @@ class Medicine extends Component {
                 <div className="row">
                     <div className="col-md-12">
                         <div className="row">
-                            <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                            {/* delivery details card start*/}
+                            <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 carddeliverydetailsparent">
                                 <div className="card h-100 border-danger bg-light mb-3 carddeliverydetails">
                                     <div class="card-header bg-danger text-white">Delivery Details</div>
                                     <div class="card-body">
                                         {/* radio starts*/}
                                         <div className="row">
-                                            <div className="col-xl-12, col-lg-12 col-md-12 col-sm-12 col-6">
+                                            <div className="col-xl-12, col-lg-12 col-md-12 col-sm-12 col-12">
                                                 <div className="row">
-                                                    <div className="col-xl-6, col-lg-6 col-md-6 col-sm-6 col-12 text-left">
+                                                    <div className="col-xl-4, col-lg-4 col-md-4 col-sm-4 col-7 text-left">
                                                         <div className="form-check-inline">
-                                                            <label class="form-check-label">
-                                                                <input type="radio" class="form-check-input" id="radioacc" name="optradio" onClick={this.loadDeliveryDetails} />From Account
+                                                            <label class="form-check-label active">
+                                                                <input type="radio" class="form-check-input " id="radioacc" name="optradio" onClick={this.loadDeliveryDetails} />From Account
                                                             </label>
                                                         </div>
                                                     </div>
-                                                    <div className="col-xl-6, col-lg-6 col-md-6 col-sm-6 col-12 text-left">
+                                                    <div className="col-xl-8, col-lg-8 col-md-8 col-sm-8 col-5 text-left">
                                                         <div className="form-check-inline">
                                                             <label class="form-check-label">
                                                                 <input type="radio" class="form-check-input" id="radioother" name="optradio" onClick={this.loadDeliveryDetails} />Other
@@ -107,16 +109,13 @@ class Medicine extends Component {
                                             </div>
                                         </div>
                                         {/* radio ends*/}
-                                        <br />
+                                        <hr/>
                                         {loaddeliverydetails}
                                     </div>
                                 </div>
                             </div>
-                            {/* <div className="col-sm-12 col-12 col-xl-0 col-lg-0 col-md-0">
-                                
-                            </div> */}
                             {/* prescription card starts */}
-                            <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 cardprescriptiondetailsparent">
                                 <div class="card h-100 border-danger bg-light mb-3 cardprescriptiondetails">
                                     <div class="card-header bg-danger text-white">Prescription Details</div>
                                     <div class="card-body">
