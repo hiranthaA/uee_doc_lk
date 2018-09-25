@@ -88,6 +88,9 @@ class Medicine extends Component {
         if(this.state.deleverydetailtype==="frmacc"){
             if(this.validatePrescription()){
                 window.$('#dlgSubmitSucces').modal('show');
+                document.getElementById("accnotes").value="";
+                document.getElementById("uploadpress").value="";
+                this.setState({file : null});
             }
             else{
                 window.$('#dlgSubmitFailed').modal('show');
@@ -96,6 +99,13 @@ class Medicine extends Component {
         else if(this.state.deleverydetailtype==="frmother"){
             if(this.validateName() & this.validateContact() & this.validateAddress() & this.validatePrescription()){
                 window.$('#dlgSubmitSucces').modal('show');
+                document.getElementById("othernotes").value="";
+                document.getElementById("othername").value="";
+                document.getElementById("othercontact").value="";
+                document.getElementById("otheraddress").value="";
+                document.getElementById("uploadpress").value="";
+                this.setState({file : null});
+
             }
             else{
                 window.$('#dlgSubmitFailed').modal('show');
