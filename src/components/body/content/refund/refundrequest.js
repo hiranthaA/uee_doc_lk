@@ -1,17 +1,94 @@
 import React, { Component } from 'react';
 
+import BankRefund from './bankrefund';
+import MobileRefund from './mobilerefund';
+import RefundSearch from './refundsearch';
+import './refundrequest.css';
+
 class RefundRequest extends Component {
     constructor(props) {
         super(props);
-        this.state = {  }
+        this.loadRefundOptions = this.loadRefundOptions.bind(this);
+        this.handleFormSelect = this.handleFormSelect.bind(this);
+        this.state = {  
+            refundOption: "bank"
+
+        }
+    }
+
+    loadRefundOptions(e){
+
+        console.log("Loaded form:"+e.target.name);
+        if(e.target.id==="bnkBtn"||e.target.value===1)
+            this.setState({ refundOption:  "bank" });
+        else if(e.target.id==="mblBtn"||e.target.value===2)
+            this.setState({ refundOption:  "mobile"  });
+        else
+            this.setState({ refundOption:  "search"   });
+    }
+
+    handleFormSelect(e){
+        this.setState({refundOption: e.target.value});
     }
     render() { 
+        let formoption;
+        if(this.state.refundOption==="bank"){
+            formoption= ( <BankRefund/> );
+        }else if(this.state.refundOption==="mobile"){
+            formoption= (<MobileRefund/>);
+        }else if(this.state.refundOption==="search"){
+            formoption=(<RefundSearch/>);
+        }
         return ( 
-            <div>
-                this is refundrequest component
+            <div class="container">
+                {/*Top Header*/}
+                <div className="row">
+                
+                    <div className="col">
+                        <h2><font size="100%">Refund Request</font></h2>
+                    </div>
+                </div>
+                <br/>
+                {/*Button Content*/}
+                <div className="row">
+                    <div className="col">
+                    {/* Desktop Form Options */}
+                        <div class="form_option" >
+                            <div className="row">
+                                <div className="col">
+                                            <button type="button" className="btn btn-block" id="bnkBtn" name="Bank Refund" onClick={this.loadRefundOptions}>Bank Refund</button>
+                                </div>
+                                <br/><br/>  
+                                <div className="col">
+                                            <button type="button" className="btn btn-block" id="mblBtn" name="Mobile Refund" onClick={this.loadRefundOptions}>Mobile Bill/Reload Refund</button>
+                                </div>
+                                <br/><br/>     
+                                <div className="col">
+                                            <button type="button" className="btn btn-block" id="srchBtn" name="Refund Search" onClick={this.loadRefundOptions}>Refund Search</button>                        
+                                        
+                                </div>
+                            </div>
+                        </div>
+                        {/*Mobile Form Options*/}
+                        <div class="form_option_mobile">
+                            <select value={this.state.formoption} onChange={this.handleFormSelect}>
+                                <option value="bank" >Bank Refund</option>
+                                <option value="mobile" >Mobile Bill/Reload Refund</option>
+                                <option value="search" >Refund Search</option>
+                            </select>
+                        
+                        </div>
+
+                    </div>
+                </div>
+               <hr/>
+               {formoption}
+               
             </div>
+            
         );
     }
+   
 }
  
 export default RefundRequest;
