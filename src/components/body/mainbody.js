@@ -9,6 +9,7 @@ import Home from './content/home/home';
 class MainBody extends Component {
     constructor(props) {
         super(props);
+        this.setMainBodyContent=this.setMainBodyContent.bind(this);
         this.state = { 
             loadedContent : "home"
          }
@@ -49,7 +50,7 @@ class MainBody extends Component {
         }
         else if(this.state.loadedContent==="home"){
             loadcontent = (
-                <Home/>
+                <Home setMainBodyContent={this.setMainBodyContent}/>
             );
         }
 
