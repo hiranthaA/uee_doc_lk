@@ -77,7 +77,7 @@ class RefundSearch extends Component {
                 <div className="row">
                 
                     <div className="col-12">
-                        <h2>Mobile Bill / Reload Refund</h2>
+                        <h2>Refund Search</h2>
                     </div>
                 </div>
                 <br/>
@@ -105,10 +105,10 @@ class RefundSearch extends Component {
                             <div className="col-sm-3">
                                 <div class="row">
             
-                                    <div className="col-xs-8 col-sm-6">                                        
+                                    <div className="col-xs-5 col-sm-5">                                        
                                             <label for="nicRadio"><input type="radio" id="nicRadio" name="optradio" checked={this.state.selectedOption === 'nic'} onChange={this.selectRadio}></input>NIC</label>
                                     </div>
-                                    <div className="col-xs-8 col-sm-6">                                    
+                                    <div className="col-xs-7 col-sm-7">                                    
                                         <label for="passportRadio"><input type="radio" id="passportRadio" name="optradio" checked={this.state.selectedOption === 'passport'} onChange={this.selectRadio}></input>PASSPORT</label>                                    
                                     </div>
                                 </div>

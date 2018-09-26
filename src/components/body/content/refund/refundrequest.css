@@ -212,10 +212,33 @@ label{
     display:block;
     width:100%;
     color: rgba(0, 0, 0, 0.89);
-    background-color: rgba(0, 17, 255, 0.267);
+    background-color: rgba(0, 255, 136, 0.568);
+    border-radius: 15px;
+    padding: 15px;
+    
+}
+.form_option_mobile select option{
+    width: 1px;
+    tab-size: 4px;
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    font-family: Arial;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    position: absolute;
+    background-color:rgba(50, 51, 6, 0.582);
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    height: 20px;
+    user-select: none;
+    border-radius: 15px;
+    
 }
 .select-selected {
-    background-color: DodgerBlue;
+    background-color: rgba(0, 22, 44, 0.808);
   }
   /*style the arrow inside the select element:*/
   .select-selected:after {
@@ -248,6 +271,7 @@ label{
     top: 100%;
     left: 0;
     right: 0;
+    width: 10px;
     z-index: 99;
   }
   /*hide the items when the select box is closed:*/
