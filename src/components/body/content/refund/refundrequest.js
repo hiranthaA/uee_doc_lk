@@ -10,6 +10,7 @@ class RefundRequest extends Component {
         super(props);
         this.loadRefundOptions = this.loadRefundOptions.bind(this);
         this.handleFormSelect = this.handleFormSelect.bind(this);
+        this.popupShow = this.popupShow.bind(this);
         this.state = {  
             refundOption: "bank"
 
@@ -27,6 +28,10 @@ class RefundRequest extends Component {
             this.setState({ refundOption:  "search"   });
     }
 
+    popupShow(){
+        var popup = document.getElementById("infoPopup");
+        popup.classList.toggle("show");
+    }
     handleFormSelect(e){
         this.setState({refundOption: e.target.value});
     }
@@ -83,7 +88,18 @@ class RefundRequest extends Component {
                 </div>
                <hr/>
                {formoption}
-               
+               <div className="row">
+               <div className="col-11"></div>
+                <div className="col-1"  onClick={this.popupShow}>
+                        <div class="popup">
+                                        <img src="./info.png" width="50px" height='50px'></img>
+                                        <span className="popuptext" id="infoPopup"><p>
+                                        "Your refund will be arranged to the same payment mode used for making the appointment" 
+                                <hr/>Example - Mobile bill/Reload refund will be arranged for Add to bill transactions and bank deposits for card payment transactions.
+                                            </p></span>
+                        </div>
+                    </div> 
+                </div>
             </div>
             
         );

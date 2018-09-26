@@ -51,7 +51,7 @@ class MobileRefund extends Component {
     }
 
     popupShow() {
-        var popup = document.getElementById("myPopup");
+        var popup = document.getElementById("helpTip");
         popup.classList.toggle("show");
     }
     handleBankSelect(e){
@@ -91,7 +91,8 @@ class MobileRefund extends Component {
                     <div className="col-8">
                         <div className="flexContainer">
                             <input class="inputField" type="text" id="mobileNum" placeholder="Mobile No/CDMA No-Required"></input>
-                            <button className="roundBtn popup" onClick={this.popupShow} id="infoMob"><img  className="roundIcon" for="infoMob" src="info.png" alt="Info Circle"  ></img><span className="popuptext" id="myPopup"><p><font size="5px">This service is available for
+                            <button className="roundBtn tooltip" onClick={this.popupShow} id="infoMob">?<span className="tooltiptext" id="helpTip"><p><font size="5px">This service is available for
+                                                <hr/>
                                                 <ul>Dialog Mobile/ Dialog CDMA</ul>
                                                 <ul>Etisalat</ul>
                                                 <ul>Airtel</ul>
@@ -99,12 +100,7 @@ class MobileRefund extends Component {
                                                 <ul>Mobitel</ul>
                                                 <ul>Lankabell CDMA</ul></font></p>
                         </span></button> 
-                            
-  
-
-                            {/* <div class="tooltip">
-                                <span class="tooltiptext">Tooltip text</span>
-                            </div> */}
+    
                         </div>
                         
                     </div>
