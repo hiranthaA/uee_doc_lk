@@ -45,7 +45,7 @@ class RefundRequest extends Component {
             formoption=(<RefundSearch/>);
         }
         return ( 
-            <div class="container">
+            <div>
                 {/*Top Header*/}
                 <div className="row">
                 
@@ -89,7 +89,7 @@ class RefundRequest extends Component {
                <hr/>
                {formoption}
                <div className="row">
-               <div className="col-11"></div>
+               
                 <div className="col-1"  onClick={this.popupShow}>
                         <div class="popup">
                                         <img src="./info.png" width="50px" height='50px'></img>
@@ -98,7 +98,8 @@ class RefundRequest extends Component {
                                 <hr/>Example - Mobile bill/Reload refund will be arranged for Add to bill transactions and bank deposits for card payment transactions.
                                             </p></span>
                         </div>
-                    </div> 
+                </div> 
+                <div className="col-5"></div>
                 </div>
             </div>
             

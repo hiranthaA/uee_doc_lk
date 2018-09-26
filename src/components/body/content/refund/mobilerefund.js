@@ -68,7 +68,7 @@ class MobileRefund extends Component {
                 {/*Top Header*/}
                 <div className="row">
                     
-                    <div className="col-xl-12">
+                    <div className="col-sm-12">
                         <h2>Mobile Bill / Reload Refund</h2>
                     </div>
                 </div>
@@ -90,15 +90,18 @@ class MobileRefund extends Component {
                     </div>
                     <div className="col-8">
                         <div className="flexContainer">
-                            <input class="inputField" type="text" id="mobileNum" placeholder="Mobile No/CDMA No-Required"></input>
+                            <input class="inputFlex" type="text" id="mobileNum" placeholder="Mobile No/CDMA No-Required"></input>
                             <button className="roundBtn tooltip" onClick={this.popupShow} id="infoMob">?<span className="tooltiptext" id="helpTip"><p><font size="5px">This service is available for
-                                                <hr/>
-                                                <ul>Dialog Mobile/ Dialog CDMA</ul>
-                                                <ul>Etisalat</ul>
-                                                <ul>Airtel</ul>
-                                                <ul>Hutch</ul>
-                                                <ul>Mobitel</ul>
-                                                <ul>Lankabell CDMA</ul></font></p>
+                                                <hr/><small>
+                                                <ul>
+                                                <li>Dialog Mobile/ Dialog CDMA</li>
+                                                <li>Etisalat</li>
+                                                <li>Airtel</li>
+                                                <li>Hutch</li>
+                                                <li>Mobitel</li>
+                                                <li>Lankabell CDMA</li>
+                                                
+                                                </ul></small></font></p>
                         </span></button> 
     
                         </div>
@@ -117,7 +120,6 @@ class MobileRefund extends Component {
                 </div>
                 
                 <hr/>
-                <br/><br/><br/><br/><br/><br/>
                 
                 <button type="submit" className="btn btn-lg btn-primary" onClick={this.validate}>Submit</button>
 

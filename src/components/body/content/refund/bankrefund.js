@@ -101,7 +101,7 @@ class BankRefund extends Component {
                 {/*Top Header*/}
                 <div className="row">
                 
-                    <div className="col-xl-12">
+                    <div className="col-12">
                         <h2>Bank Refund</h2>
                     </div>
                 </div>
@@ -140,10 +140,13 @@ class BankRefund extends Component {
                     </div>
                     
                     <div className="col-4">
+                   
                         <input class="form_input" type="text" for="bankSelect" id="bankName" placeholder="Bank Name-Required"></input>
+                        
                     </div>
+                    <div class="clearfix visible-xs"></div>
                     <div className="col-4">
-                        <select class="form_option" id="bankSelect" for="bankName" value={this.state.selectedBank} onChange={this.handleBankSelect}>
+                        <select class="form_bank_option" id="bankSelect" for="bankName" value={this.state.selectedBank} onChange={this.handleBankSelect}>
                             <option value="1">Bank Of Ceylon</option>
                             <option value="2">Commercial Bank</option>
                             <option value="3">Nations Trust Bank</option>

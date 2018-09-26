@@ -76,7 +76,7 @@ class RefundSearch extends Component {
                 {/*Top Header*/}
                 <div className="row">
                 
-                    <div className="col-xl-12">
+                    <div className="col-12">
                         <h2>Mobile Bill / Reload Refund</h2>
                     </div>
                 </div>
@@ -94,29 +94,36 @@ class RefundSearch extends Component {
 
                 <div className="row">
                     <div className="col-4">
-                        <label for="nicorpass">NIC/Passport<font color="red">*</font></label>
+                        <div className="row">
+                            
+                                <label for="nicorpass">NIC/Passport<font color="red">*</font></label>
+                            
+                        </div>
                     </div>
                     <div className="col-8">
-                        <div className="row">
-                            <div className="col-3">
-                                <div className="row">
-                                    <div className="col">
-                                        <label for="nicRadio">NIC:<input type="radio" id="nicRadio" name="optradio" checked={this.state.selectedOption === 'nic'} onChange={this.selectRadio}></input></label>
+                        <div class="row">
+                            <div className="col-sm-3">
+                                <div class="row">
+            
+                                    <div className="col-xs-8 col-sm-6">                                        
+                                            <label for="nicRadio"><input type="radio" id="nicRadio" name="optradio" checked={this.state.selectedOption === 'nic'} onChange={this.selectRadio}></input>NIC</label>
                                     </div>
-                                    <div className="col">
-                                        <label for="passportRadio">PASSPORT:<input type="radio" id="passportRadio" name="optradio" checked={this.state.selectedOption === 'passport'} onChange={this.selectRadio}></input></label>
+                                    <div className="col-xs-8 col-sm-6">                                    
+                                        <label for="passportRadio"><input type="radio" id="passportRadio" name="optradio" checked={this.state.selectedOption === 'passport'} onChange={this.selectRadio}></input>PASSPORT</label>                                    
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-9">
+                            <div className="col-sm-9">
+                            
                                 <input class="form_input" type="text" id="nicorpass" placeholder="NIC/Passport-Required"></input>
+                                </div>
                             </div>
-                        </div>
+                        <div/>
                     </div>
                 </div>
                 
                 <hr/>
-                <br/><br/><br/><br/><br/><br/>
+
                 
                 <button className="btn btn-lg btn-warning" onClick={this.validate}> Search</button>
 
