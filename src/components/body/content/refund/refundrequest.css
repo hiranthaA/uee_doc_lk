@@ -1,0 +1,321 @@
+label{
+    width:100%;
+    text-align: left;
+
+}
+.form_letter{
+    font-size:180px;
+}
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+.form_option{  
+    text-align: center;
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    height: 2rem;
+}
+.form_bank_option{
+
+    text-align: center;
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    height: 2rem;
+    font-size: 1vw;
+}
+
+
+.roundBtn{
+    -webkit-appearance:caret;
+    position:absolute;
+    top: 2px;
+    border:none;
+    height:25px;
+    width:25px;
+    border-radius:100%;
+    outline:none;
+    text-align:center;
+    font-weight:bold;
+    padding:2px;
+    cursor: help;
+    color: rgb(255, 255, 0);
+    background-color: cornflowerblue
+}
+
+.roundIcon{
+
+
+    position:absolute;
+    right:-5px;
+    top: -2px;
+    border:none;
+    width:25px;
+    border-radius:100%;
+    outline:none;
+    text-align:center;
+    font-weight:bold;
+
+
+}
+
+.flexContainer{
+    display: flex;
+    outline: none; 
+    text-align: center; 
+    margin-bottom:10px;
+
+    position: relative;
+}
+
+.inputFlex{
+    flex:1;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+}
+.container input{
+    position: relative;
+    border-radius: 10px;
+    opacity: 100;
+    width: 100%;
+    padding-left: 15px;
+    outline-color: aquamarine;
+    -moz-outline-radius:20px;
+
+}
+
+.form_input{
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    padding-left: 15px;
+}
+
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+    border: none;
+    border-radius: 25px;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: rgba(243, 255, 177, 0.952);
+    color: rgb(255, 0, 0);
+    text-align: left;
+    font-size: 18px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    margin-left: -20px;
+    cursor: help;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+    border-radius: 10px;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+
+ /* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+    opacity: 100;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 150vd;
+    background-color: rgb(1, 15, 27);
+    color: rgb(255, 240, 240);
+    border-radius: 6px;
+    font-size: 100%;
+    text-align: left;
+    padding: 10px;
+    
+    /* Position the tooltip text */
+    position: absolute;
+
+    bottom: 125%;
+    left: 50%;
+    margin-left: -200px;
+
+    /* Fade in tooltip */
+    opacity: 100;
+    transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+.form_option_mobile{
+    
+    position: relative;
+    font-family: Arial;
+}
+
+.form_option_mobile select{
+    display:block;
+    width:100%;
+    color: rgba(0, 0, 0, 0.89);
+    background-color: rgba(0, 255, 136, 0.568);
+    border-radius: 15px;
+    padding: 15px;
+    
+}
+.form_option_mobile select option{
+    width: 1px;
+    tab-size: 4px;
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    font-family: Arial;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    position: absolute;
+    background-color:rgba(50, 51, 6, 0.582);
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    height: 20px;
+    user-select: none;
+    border-radius: 15px;
+    
+}
+.select-selected {
+    background-color: rgba(0, 22, 44, 0.808);
+  }
+  /*style the arrow inside the select element:*/
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
+  /*point the arrow upwards when the select box is open (active):*/
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+  }
+  /*style the items (options), including the selected item:*/
+  .select-items div,.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+  }
+  /*style items (options):*/
+  .select-items {
+    position: absolute;
+    background-color: DodgerBlue;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 10px;
+    z-index: 99;
+  }
+  /*hide the items when the select box is closed:*/
+  .select-hide {
+    display: none;
+  }
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+@media not all and (min-width: 620px)  {
+    .form_letter{
+        font-size:120px;
+    }
+     .form_option{
+        display: none;
+    }
+    .form_bank_option{
+        font-size: 12px;
+    }
+    .inputFlex{
+        font-size: 12px;
+    }
+    .form_input{
+        font-size: 12px;
+    }
+    label{
+        font-size: 10px;
+    }
+
+}
+@media not all and (max-width: 620px)  {
+    .form_letter_mobile{
+        font-size:.8rem;
+    }
+    
+     .form_option_mobile{
+        display: none;
+    }
+    .form_input{
+        font-size: inherit;
+    }
+    .form_bank_option{
+        font-size: 1vw;
+    }
+
+}
