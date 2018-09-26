@@ -99,7 +99,7 @@ class BankRefund extends Component {
         return ( 
             <div>
                 {/*Top Header*/}
-                <div className="row">
+                <div className="row typeHeader">
                 
                     <div className="col-12">
                         <h2>Bank Refund</h2>
@@ -166,6 +166,7 @@ class BankRefund extends Component {
                 </div>
                 <hr/>
                 <br/><br/>
+                <br/>
                 <button type="submit" className="btn btn-lg btn-primary" onClick={this.validate}>Submit</button>
 
 

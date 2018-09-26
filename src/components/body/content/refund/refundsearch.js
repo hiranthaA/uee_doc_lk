@@ -74,7 +74,7 @@ class RefundSearch extends Component {
         return ( 
             <div>
                 {/*Top Header*/}
-                <div className="row">
+                <div className="row typeHeader">
                 
                     <div className="col-12">
                         <h2>Refund Search</h2>
@@ -124,7 +124,7 @@ class RefundSearch extends Component {
                 
                 <hr/>
 
-                
+                <br/><br/><br/><br/><br/><br/><br/><br/><br/>
                 <button className="btn btn-lg btn-warning" onClick={this.validate}> Search</button>
 
                 {/* Submit Success Dialog */}
