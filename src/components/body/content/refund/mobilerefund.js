@@ -66,7 +66,7 @@ class MobileRefund extends Component {
         return ( 
             <div>
                 {/*Top Header*/}
-                <div className="row">
+                <div className="row typeHeader" >
                     
                     <div className="col-sm-12">
                         <h2>Mobile Bill / Reload Refund</h2>
@@ -120,7 +120,7 @@ class MobileRefund extends Component {
                 </div>
                 
                 <hr/>
-                
+                <br/><br/><br/><br/><br/><br/><br/>
                 <button type="submit" className="btn btn-lg btn-primary" onClick={this.validate}>Submit</button>
 
 

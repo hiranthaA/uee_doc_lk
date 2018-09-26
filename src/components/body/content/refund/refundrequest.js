@@ -50,7 +50,7 @@ class RefundRequest extends Component {
                 {/*Top Header*/}
                 <div className="row">
                 
-                    <div className="col">
+                    <div className="col head">
                         <h2><font size="100%">Refund Request</font></h2>
                     </div>
                 </div>
@@ -62,15 +62,15 @@ class RefundRequest extends Component {
                         <div class="form_option" >
                             <div className="row">
                                 <div className="col">
-                                            <button type="button" className="btn btn-block" id="bnkBtn" name="Bank Refund" onClick={this.loadRefundOptions}>Bank Refund</button>
+                                            <button type="button" className="btn btn-block headBtn" id="bnkBtn" name="Bank Refund" onClick={this.loadRefundOptions}>Bank Refund</button>
                                 </div>
                                 <br/><br/>  
                                 <div className="col">
-                                            <button type="button" className="btn btn-block" id="mblBtn" name="Mobile Refund" onClick={this.loadRefundOptions}>Mobile Bill/Reload Refund</button>
+                                            <button type="button" className="btn btn-block headBtn" id="mblBtn" name="Mobile Refund" onClick={this.loadRefundOptions}>Mobile Bill/Reload Refund</button>
                                 </div>
                                 <br/><br/>     
                                 <div className="col">
-                                            <button type="button" className="btn btn-block" id="srchBtn" name="Refund Search" onClick={this.loadRefundOptions}>Refund Search</button>                        
+                                            <button type="button" className="btn btn-block headBtn" id="srchBtn" name="Refund Search" onClick={this.loadRefundOptions}>Refund Search</button>                        
                                         
                                 </div>
                             </div>
@@ -90,7 +90,7 @@ class RefundRequest extends Component {
                <hr/>
                {formoption}
                <div className="row">
-               
+               <div className="col-9"></div>
                 <div className="col-1"  onClick={this.popupShow}>
                         <div class="popup">
                                         <img src="./info.png" width="50px" height='50px'></img>
@@ -100,7 +100,7 @@ class RefundRequest extends Component {
                                             </p></span>
                         </div>
                 </div> 
-                <div className="col-5"></div>
+                
                 </div>
             </div>
             
