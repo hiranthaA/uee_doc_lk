@@ -139,13 +139,15 @@ class BankRefund extends Component {
                         <label for="bankName">BANK NAME<font color="red">*</font></label>
                     </div>
                     
-                    <div className="col-4">
+                    <div className="col-8">
                    
                         <input class="form_input" type="text" for="bankSelect" id="bankName" placeholder="Bank Name-Required"></input>
                         
                     </div>
                     <div class="clearfix visible-xs"></div>
-                    <div className="col-4">
+                    <div class="clearfix visible-xs"></div>
+                    <div className="col-6"></div>
+                    <div className="col-6">
                         <select class="form_bank_option" id="bankSelect" for="bankName" value={this.state.selectedBank} onChange={this.handleBankSelect}>
                             <option value="1">Bank Of Ceylon</option>
                             <option value="2">Commercial Bank</option>
@@ -165,7 +167,7 @@ class BankRefund extends Component {
                     </div>
                 </div>
                 <hr/>
-                <br/><br/>
+                
                 <br/>
                 <button type="submit" className="btn btn-lg btn-primary" onClick={this.validate}>Submit</button>
 
