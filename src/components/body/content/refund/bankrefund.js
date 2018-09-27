@@ -97,9 +97,9 @@ class BankRefund extends Component {
         
 
         return ( 
-            <div>
+            <div className="card h-100 border-danger">
                 {/*Top Header*/}
-                <div className="row typeHeader">
+                <div className="row typeHeader card-header bg-danger text-white">
                 
                     <div className="col-12">
                         <h2>Bank Refund</h2>
@@ -107,71 +107,72 @@ class BankRefund extends Component {
                 </div>
                 <br/>
                 {/*Content Form*/}
-                <div className="row">
-                    <div className="col-4">
-                        <label for="refID">REFERENCE NO<font color="red">*</font></label>
+                <div className="card-body">
+                    <div className="row">
+                        <div className="col-4">
+                            <label for="refID">REFERENCE NO<font color="red">*</font></label>
+                        </div>
+                        <div className="col-8">
+                            <input class="form_input" type="text" id="refID" placeholder="Reference No-Required"></input>
+                        </div>
                     </div>
-                    <div className="col-8">
-                        <input class="form_input" type="text" id="refID" placeholder="Reference No-Required"></input>
+                    <hr/>
+                    <div className="row">
+                        <div className="col-4">
+                            <label for="holderName">BANK ACCOUNT HOLDER NAME<font color="red">*</font></label>
+                        </div>
+                        <div className="col-8">
+                            <input class="form_input" type="text" id="holderName" placeholder="Bank Account Holder Name-Required"></input>
+                        </div>
                     </div>
-                </div>
-                <hr/>
-                <div className="row">
-                    <div className="col-4">
-                        <label for="holderName">BANK ACCOUNT HOLDER NAME<font color="red">*</font></label>
+                    <hr/>
+                    <div className="row">
+                        <div className="col-4">
+                            <label for="accNO">BANK ACCOUNT NO<font color="red">*</font></label>
+                        </div>
+                        <div className="col-8">
+                            <input class="form_input" type="text" id="accNO" placeholder="Bank Account No-Required"></input>
+                        </div>
                     </div>
-                    <div className="col-8">
-                        <input class="form_input" type="text" id="holderName" placeholder="Bank Account Holder Name-Required"></input>
-                    </div>
-                </div>
-                <hr/>
-                <div className="row">
-                    <div className="col-4">
-                        <label for="accNO">BANK ACCOUNT NO<font color="red">*</font></label>
-                    </div>
-                    <div className="col-8">
-                        <input class="form_input" type="text" id="accNO" placeholder="Bank Account No-Required"></input>
-                    </div>
-                </div>
-                <hr/>
-                <div className="row">
-                    <div className="col-4">
-                        <label for="bankName">BANK NAME<font color="red">*</font></label>
-                    </div>
+                    <hr/>
+                    <div className="row">
+                        <div className="col-4">
+                            <label for="bankName">BANK NAME<font color="red">*</font></label>
+                        </div>
+                        
+                        <div className="col-8">
                     
-                    <div className="col-8">
-                   
-                        <input class="form_input" type="text" for="bankSelect" id="bankName" placeholder="Bank Name-Required"></input>
+                            <input class="form_input" type="text" for="bankSelect" id="bankName" placeholder="Bank Name-Required"></input>
+                            
+                        </div>
+                        <div class="clearfix visible-xs"></div>
+                        <div class="clearfix visible-xs"></div>
+                        <div className="col-6"></div>
+                        <div className="col-6">
+                            <select class="form_bank_option" id="bankSelect" for="bankName" value={this.state.selectedBank} onChange={this.handleBankSelect}>
+                                <option value="1">Bank Of Ceylon</option>
+                                <option value="2">Commercial Bank</option>
+                                <option value="3">Nations Trust Bank</option>
+                                <option value="4">National Savings Bank</option>
+                            </select>
+                        </div>
                         
                     </div>
-                    <div class="clearfix visible-xs"></div>
-                    <div class="clearfix visible-xs"></div>
-                    <div className="col-6"></div>
-                    <div className="col-6">
-                        <select class="form_bank_option" id="bankSelect" for="bankName" value={this.state.selectedBank} onChange={this.handleBankSelect}>
-                            <option value="1">Bank Of Ceylon</option>
-                            <option value="2">Commercial Bank</option>
-                            <option value="3">Nations Trust Bank</option>
-                            <option value="4">National Savings Bank</option>
-                        </select>
+                    <hr/>
+                    <div className="row">
+                        <div className="col-4">
+                            <label for="refRem">REFUND REMARKS</label>
+                        </div>
+                        <div className="col-8">
+                            <input class="form_input" type="text" id="refRem" placeholder="Refund Remarks-Optional"></input>
+                        </div>
                     </div>
+                    <hr/>
                     
+                    <br/>
+                    <button type="submit" className="btn btn-lg btn-primary" onClick={this.validate}>Submit</button>
                 </div>
-                <hr/>
-                <div className="row">
-                    <div className="col-4">
-                        <label for="refRem">REFUND REMARKS</label>
-                    </div>
-                    <div className="col-8">
-                        <input class="form_input" type="text" id="refRem" placeholder="Refund Remarks-Optional"></input>
-                    </div>
-                </div>
-                <hr/>
-                
-                <br/>
-                <button type="submit" className="btn btn-lg btn-primary" onClick={this.validate}>Submit</button>
-
-
+            
                 {/* Submit Success Dialog */}
                 <div className="modal fade" id="bankRefundSuccess" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-sm" role="document">

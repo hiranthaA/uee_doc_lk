@@ -64,9 +64,9 @@ class MobileRefund extends Component {
         
 
         return ( 
-            <div>
+            <div className="card h-100 border-danger" >
                 {/*Top Header*/}
-                <div className="row typeHeader" >
+                <div className="row typeHeader card-header bg-danger text-white" >
                     
                     <div className="col-sm-12">
                         <h2>Mobile Bill / Reload Refund</h2>
@@ -74,55 +74,56 @@ class MobileRefund extends Component {
                 </div>
                 <br/>
                 {/*Content Form*/}
-                <div className="row">
-                    <div className="col-4">
-                        <label for="refID">REFERENCE NO<font color="red">*</font></label>
-                    </div>
-                    <div className="col-8">
-                        <input class="form_input" type="text" id="refID" placeholder="Reference No-Required"></input>
-                    </div>
-                </div>
-                <hr/>
-
-                <div className="row">
-                    <div className="col-4">
-                        <label for="mobileNum">MOBILE NO / CDMA NO<font color="red">*</font></label>
-                    </div>
-                    <div className="col-8">
-                        <div className="flexContainer">
-                            <input class="inputFlex" type="text" id="mobileNum" placeholder="Mobile No/CDMA No-Required"></input>
-                            <button className="roundBtn tooltip" onClick={this.popupShow} id="infoMob">?<span className="tooltiptext" id="helpTip"><p><font size="5px">This service is available for
-                                                <hr/><small>
-                                                <ul>
-                                                <li>Dialog Mobile/ Dialog CDMA</li>
-                                                <li>Etisalat</li>
-                                                <li>Airtel</li>
-                                                <li>Hutch</li>
-                                                <li>Mobitel</li>
-                                                <li>Lankabell CDMA</li>
-                                                
-                                                </ul></small></font></p>
-                        </span></button> 
-    
+                <div className="card-body">
+                    <div className="row ">
+                        <div className="col-4">
+                            <label for="refID">REFERENCE NO<font color="red">*</font></label>
                         </div>
-                        
+                        <div className="col-8">
+                            <input class="form_input" type="text" id="refID" placeholder="Reference No-Required"></input>
+                        </div>
                     </div>
-                </div>
-                <hr/>
-                
-                <div className="row">
-                    <div className="col-4">
-                        <label for="refRem">REFUND REMARKS</label>
-                    </div>
-                    <div className="col-8">
-                        <input class="form_input" type="text" id="refRem" placeholder="Refund Remarks-Optional"></input>
-                    </div>
-                </div>
-                
-                <hr/>
-                <br/><br/><br/><br/><br/><br/><br/>
-                <button type="submit" className="btn btn-lg btn-primary" onClick={this.validate}>Submit</button>
+                    <hr/>
 
+                    <div className="row">
+                        <div className="col-4">
+                            <label for="mobileNum">MOBILE NO / CDMA NO<font color="red">*</font></label>
+                        </div>
+                        <div className="col-8">
+                            <div className="flexContainer">
+                                <input class="inputFlex" type="text" id="mobileNum" placeholder="Mobile No/CDMA No-Required"></input>
+                                <button className="roundBtn tooltip" onClick={this.popupShow} id="infoMob">?<span className="tooltiptext" id="helpTip"><p><font size="5px">This service is available for
+                                                    <hr/><small>
+                                                    <ul>
+                                                    <li>Dialog Mobile/ Dialog CDMA</li>
+                                                    <li>Etisalat</li>
+                                                    <li>Airtel</li>
+                                                    <li>Hutch</li>
+                                                    <li>Mobitel</li>
+                                                    <li>Lankabell CDMA</li>
+                                                    
+                                                    </ul></small></font></p>
+                            </span></button> 
+        
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <hr/>
+                    
+                    <div className="row">
+                        <div className="col-4">
+                            <label for="refRem">REFUND REMARKS</label>
+                        </div>
+                        <div className="col-8">
+                            <input class="form_input" type="text" id="refRem" placeholder="Refund Remarks-Optional"></input>
+                        </div>
+                    </div>
+                    
+                    <hr/>
+                    <br/><br/><br/><br/><br/><br/><br/>
+                    <button type="submit" className="btn btn-lg btn-primary" onClick={this.validate}>Submit</button>
+                </div>
 
                 {/* Submit Success Dialog */}
                 <div className="modal fade" id="bankRefundSuccess" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

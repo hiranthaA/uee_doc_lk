@@ -72,9 +72,9 @@ class RefundSearch extends Component {
         
 
         return ( 
-            <div>
+            <div className="card h-100 border-danger">
                 {/*Top Header*/}
-                <div className="row typeHeader">
+                <div className="row typeHeader card-header bg-danger text-white">
                 
                     <div className="col-12">
                         <h2>Refund Search</h2>
@@ -82,51 +82,52 @@ class RefundSearch extends Component {
                 </div>
                 <br/>
                 {/*Content Form*/}
-                <div className="row">
-                    <div className="col-4">
-                        <label for="refID">REFERENCE NO<font color="red">*</font></label>
-                    </div>
-                    <div className="col-8">
-                        <input class="form_input" type="text" id="refID" placeholder="Reference No-Required"></input>
-                    </div>
-                </div>
-                <hr/>
-
-                <div className="row">
-                    <div className="col-4">
-                        <div className="row">
-                            
-                                <label for="nicorpass">NIC/Passport<font color="red">*</font></label>
-                            
+                <div className="card-body">
+                    <div className="row">
+                        <div className="col-4">
+                            <label for="refID">REFERENCE NO<font color="red">*</font></label>
+                        </div>
+                        <div className="col-8">
+                            <input class="form_input" type="text" id="refID" placeholder="Reference No-Required"></input>
                         </div>
                     </div>
-                    <div className="col-8">
-                        <div class="row">
-                            <div className="col-sm-3">
-                                <div class="row">
-            
-                                    <div className="col-xs-5 col-sm-5">                                        
-                                            <label for="nicRadio"><input type="radio" id="nicRadio" name="optradio" checked={this.state.selectedOption === 'nic'} onChange={this.selectRadio}></input>NIC</label>
-                                    </div>
-                                    <div className="col-xs-7 col-sm-7">                                    
-                                        <label for="passportRadio"><input type="radio" id="passportRadio" name="optradio" checked={this.state.selectedOption === 'passport'} onChange={this.selectRadio}></input>PASSPORT</label>                                    
-                                    </div>
-                                </div>
+                    <hr/>
+
+                    <div className="row">
+                        <div className="col-4">
+                            <div className="row">
+                                
+                                    <label for="nicorpass">NIC/Passport<font color="red">*</font></label>
+                                
                             </div>
-                            <div className="col-sm-9">
-                            
-                                <input class="form_input" type="text" id="nicorpass" placeholder="NIC/Passport-Required"></input>
-                                </div>
-                            </div>
-                        <div/>
-                    </div>
-                </div>
+                        </div>
+                        <div className="col-8">
+                            <div class="row">
+                                <div className="col-sm-3">
+                                    <div class="row">
                 
-                <hr/>
+                                        <div className="col-xs-5 col-sm-5">                                        
+                                                <label for="nicRadio"><input type="radio" id="nicRadio" name="optradio" checked={this.state.selectedOption === 'nic'} onChange={this.selectRadio}></input>NIC</label>
+                                        </div>
+                                        <div className="col-xs-7 col-sm-7">                                    
+                                            <label for="passportRadio"><input type="radio" id="passportRadio" name="optradio" checked={this.state.selectedOption === 'passport'} onChange={this.selectRadio}></input>PASSPORT</label>                                    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-sm-9">
+                                
+                                    <input class="form_input" type="text" id="nicorpass" placeholder="NIC/Passport-Required"></input>
+                                    </div>
+                                </div>
+                            <div/>
+                        </div>
+                    </div>
+                    
+                    <hr/>
 
-                <br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                <button className="btn btn-lg btn-warning" onClick={this.validate}> Search</button>
-
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    <button className="btn btn-lg btn-warning" onClick={this.validate}> Search</button>
+                </div>
                 {/* Submit Success Dialog */}
                 <div className="modal fade" id="bankRefundSuccess" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-sm" role="document">

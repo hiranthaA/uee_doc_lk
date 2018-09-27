@@ -12,6 +12,14 @@ label{
     background-color:rgba(0, 255, 136, 0.568);
 
 }
+.btn-group-lg>.btn, .btn-lg {
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+    align-self: center;
+    width: 50%;
+}
 .typeHeader{
     color:red;
     background-color: antiquewhite;
