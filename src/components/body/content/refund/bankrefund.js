@@ -14,10 +14,14 @@ class BankRefund extends Component {
         if(this.refValidate() & this.holdValidate() & this.accValidate() & this.bankValidate()){
             validated =true;
         }
-        if(validated!=true)
+        if(validated!=true){
             window.$('#bankRefundFailed').modal('show');
-        else
+            this.progressError();
+        }
+        else{
             window.$('#bankRefundSuccess').modal('show');
+            this.progress();
+        }
         return validated;
     }
 
@@ -48,6 +52,9 @@ class BankRefund extends Component {
             
             return true;
         }
+    }
+    componentDidMount(e){
+        this.progress();
     }
     accValidate(){
         var accNo = document.getElementById("accNO").value;
@@ -93,9 +100,39 @@ class BankRefund extends Component {
             document.getElementById("bankName").value="National Savings Bank";
         }
     }
+    progress() {
+        var elem = document.getElementById("myBar"); 
+        var width = 10;
+        var id = setInterval(frame, 1);
+        function frame() {
+            if (width >= 100) {
+                clearInterval(id);
+            } else {
+                width++; 
+                elem.style.width = width + '%'; 
+                elem.style.backgroundColor="green";
+                elem.innerHTML = width * 1 + '%';
+            }
+        }
+    }
+    progressError() {
+        var elem = document.getElementById("myBar"); 
+        var width = 10;
+        var id = setInterval(frame, 1);
+        function frame() {
+            if (width >= 100) {
+                clearInterval(id);
+            } else {
+                width++; 
+                elem.style.width = width + '%'; 
+                elem.style.backgroundColor="red";
+                elem.innerHTML = width * 1 + '%';
+            }
+        }
+    }
     render() { 
         
-
+       
         return ( 
             <div className="card h-100 border-danger">
                 {/*Top Header*/}
@@ -169,7 +206,7 @@ class BankRefund extends Component {
                     </div>
                     <hr/>
                     
-                    <br/>
+
                     <button type="submit" className="btn btn-lg btn-primary" onClick={this.validate}>Submit</button>
                 </div>
             
@@ -213,6 +250,7 @@ class BankRefund extends Component {
                 </div>
             </div>
         );
+        
     }
 }
  

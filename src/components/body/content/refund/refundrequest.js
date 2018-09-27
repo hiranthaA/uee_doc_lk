@@ -33,6 +33,7 @@ class RefundRequest extends Component {
         var popup = document.getElementById("infoPopup");
         popup.classList.toggle("show");
     }
+    
     handleFormSelect(e){
         this.setState({refundOption: e.target.value});
     }
@@ -45,6 +46,7 @@ class RefundRequest extends Component {
         }else if(this.state.refundOption==="search"){
             formoption=(<RefundSearch/>);
         }
+      
         return ( 
             <div>
                 {/*Top Header*/}
@@ -53,6 +55,10 @@ class RefundRequest extends Component {
                     <div className="col head">
                         <h2><font size="100%">Refund Request</font></h2>
                     </div>
+                </div>
+                <br/>
+                <div id="myProgress">
+                    <div id="myBar">0%</div>
                 </div>
                 <br/>
                 {/*Button Content*/}
@@ -105,6 +111,7 @@ class RefundRequest extends Component {
             </div>
             
         );
+        
     }
    
 }

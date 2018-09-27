@@ -15,10 +15,14 @@ class MobileRefund extends Component {
         if(this.refValidate() & this.mobileNumValidate()){
             validated =true;
         }
-        if(validated!=true)
+        if(validated!=true){
             window.$('#bankRefundFailed').modal('show');
-        else
+            this.progressError();
+        }
+        else{
             window.$('#bankRefundSuccess').modal('show');
+            this.progress();
+        }
         return validated;
     }
     refValidate(){
@@ -59,6 +63,39 @@ class MobileRefund extends Component {
         console.log("Bank "+e.target.value +" :Selected");
         this.setState({ clicked: e.target.value });
       
+    }
+    componentDidMount(e){
+        this.progress();
+    }
+    progress() {
+        var elem = document.getElementById("myBar"); 
+        var width = 10;
+        var id = setInterval(frame, 1);
+        function frame() {
+            if (width >= 100) {
+                clearInterval(id);
+            } else {
+                width++; 
+                elem.style.width = width + '%'; 
+                elem.style.backgroundColor="green";
+                elem.innerHTML = width * 1 + '%';
+            }
+        }
+    }
+    progressError() {
+        var elem = document.getElementById("myBar"); 
+        var width = 10;
+        var id = setInterval(frame, 1);
+        function frame() {
+            if (width >= 100) {
+                clearInterval(id);
+            } else {
+                width++; 
+                elem.style.width = width + '%'; 
+                elem.style.backgroundColor="red";
+                elem.innerHTML = width * 1 + '%';
+            }
+        }
     }
     render() { 
         

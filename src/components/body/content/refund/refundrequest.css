@@ -270,6 +270,14 @@ label{
     width: 100%;
     margin-left: 0;
 }
+#myBar {
+    width: 10%;
+    height: 30px;
+    background-color: #4CAF50;
+    text-align: center; /* To center it horizontally (if you want) */
+    line-height: 30px; /* To center it vertically */
+    color: white; 
+}
 .select-selected {
     background-color: rgba(0, 22, 44, 0.808);
   }
