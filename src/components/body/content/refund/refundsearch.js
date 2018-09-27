@@ -22,10 +22,14 @@ class RefundSearch extends Component {
         if(this.refValidate() & this.NICpassportValidate()){
             validated =true;
         }
-        if(validated!=true)
+        if(validated!=true){
             window.$('#bankRefundFailed').modal('show');
-        else
+            this.progressError();
+        }
+        else{
             window.$('#bankRefundSuccess').modal('show');
+            this.progress();
+        }
         return validated;
     }
     refValidate(){
@@ -39,6 +43,39 @@ class RefundSearch extends Component {
             return false;
         } else {
             return true;
+        }
+    }
+    componentDidMount(e){
+        this.progress();
+    }
+    progress() {
+        var elem = document.getElementById("myBar"); 
+        var width = 10;
+        var id = setInterval(frame, 1);
+        function frame() {
+            if (width >= 100) {
+                clearInterval(id);
+            } else {
+                width++; 
+                elem.style.width = width + '%'; 
+                elem.style.backgroundColor="green";
+                elem.innerHTML = width * 1 + '%';
+            }
+        }
+    }
+    progressError() {
+        var elem = document.getElementById("myBar"); 
+        var width = 10;
+        var id = setInterval(frame, 1);
+        function frame() {
+            if (width >= 100) {
+                clearInterval(id);
+            } else {
+                width++; 
+                elem.style.width = width + '%'; 
+                elem.style.backgroundColor="red";
+                elem.innerHTML = width * 1 + '%';
+            }
         }
     }
     selectRadio(e){
@@ -107,16 +144,16 @@ class RefundSearch extends Component {
                                     <div class="row">
                 
                                         <div className="col-xs-5 col-sm-5">                                        
-                                                <label for="nicRadio"><input type="radio" id="nicRadio" name="optradio" checked={this.state.selectedOption === 'nic'} onChange={this.selectRadio}></input>NIC</label>
+                                                <label for="nicRadio" className="radioText"><input type="radio" id="nicRadio"  name="optradio" checked={this.state.selectedOption === 'nic'} onChange={this.selectRadio}></input>NIC</label>
                                         </div>
                                         <div className="col-xs-7 col-sm-7">                                    
-                                            <label for="passportRadio"><input type="radio" id="passportRadio" name="optradio" checked={this.state.selectedOption === 'passport'} onChange={this.selectRadio}></input>PASSPORT</label>                                    
+                                            <label for="passportRadio" className="radioText"><input type="radio" id="passportRadio"  name="optradio" checked={this.state.selectedOption === 'passport'} onChange={this.selectRadio}></input>PASSPORT</label>                                    
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-sm-9">
                                 
-                                    <input class="form_input" type="text" id="nicorpass" placeholder="NIC/Passport-Required"></input>
+                                    <input class="form_input fix" type="text" id="nicorpass" placeholder="NIC/Passport-Required"></input>
                                     </div>
                                 </div>
                             <div/>
