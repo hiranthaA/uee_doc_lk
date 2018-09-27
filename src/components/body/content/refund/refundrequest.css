@@ -12,6 +12,14 @@ label{
     background-color:rgba(0, 255, 136, 0.568);
 
 }
+.btn-group-lg>.btn, .btn-lg {
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+    align-self: center;
+    width: 50%;
+}
 .typeHeader{
     color:red;
     background-color: antiquewhite;
@@ -83,11 +91,17 @@ label{
     position: relative;
 }
 
+.radioText{
+    
+    width:100px;
+}
+
 .inputFlex{
     flex:1;
     display: block;
     width: 100%;
     border-radius: 5px;
+    padding-left: 15px;
 }
 .container input{
     position: relative;
@@ -171,6 +185,7 @@ label{
     display: inline-block;
     border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
     opacity: 100;
+    z-index: 0;
 }
 
 /* Tooltip text */
@@ -251,6 +266,10 @@ label{
     border-radius: 15px;
     
 }
+.fix{
+    width: 100%;
+    margin-left: 0;
+}
 .select-selected {
     background-color: rgba(0, 22, 44, 0.808);
   }
@@ -307,6 +326,10 @@ label{
         font-size: 12px;
         
     }
+    .fix{
+        width: 185px;
+        margin-left: -10px;
+    }
     .inputFlex{
         font-size: 12px;
     }
@@ -326,6 +349,9 @@ label{
     
      .form_option_mobile{
         display: none;
+    }
+    .fix{
+        
     }
     .form_input{
         font-size: inherit;
