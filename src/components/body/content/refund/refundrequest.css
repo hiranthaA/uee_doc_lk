@@ -179,6 +179,7 @@ label{
     display: inline-block;
     border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
     opacity: 100;
+    z-index: 0;
 }
 
 /* Tooltip text */

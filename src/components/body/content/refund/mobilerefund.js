@@ -121,7 +121,7 @@ class MobileRefund extends Component {
                     </div>
                     
                     <hr/>
-                    <br/><br/><br/><br/><br/><br/><br/>
+                    <br/><br/><br/><br/><br/><br/>
                     <button type="submit" className="btn btn-lg btn-primary" onClick={this.validate}>Submit</button>
                 </div>
 
