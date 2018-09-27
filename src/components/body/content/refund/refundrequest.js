@@ -32,7 +32,24 @@ class RefundRequest extends Component {
     popupShow(){
         var popup = document.getElementById("infoPopup");
         popup.classList.toggle("show");
+        this.progress();    
     }
+    progress() {
+        var elem = document.getElementById("myBar"); 
+        var width = 10;
+        var id = setInterval(frame, 1);
+        function frame() {
+            if (width >= 100) {
+                clearInterval(id);
+            } else {
+                width++; 
+                elem.style.width = width + '%'; 
+                elem.style.backgroundColor="blue";
+                elem.innerHTML = width * 1 + '%';
+            }
+        }
+    }
+
     
     handleFormSelect(e){
         this.setState({refundOption: e.target.value});
@@ -48,7 +65,7 @@ class RefundRequest extends Component {
         }
       
         return ( 
-            <div>
+            <div className="refund">
                 {/*Top Header*/}
                 <div className="row">
                 
