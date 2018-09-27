@@ -45,7 +45,7 @@ class BankRefund extends Component {
 
         var holder2 = document.getElementById("holderName2").value;
 
-        debugger;
+
         if(holder==="" && holder2===""){
             return false;
         }
