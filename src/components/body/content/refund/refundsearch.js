@@ -107,16 +107,27 @@ class RefundSearch extends Component {
                                     <div class="row">
                 
                                         <div className="col-xs-5 col-sm-5">                                        
+<<<<<<< HEAD
                                                 <label for="nicRadio" className="radioText"><input type="radio" id="nicRadio"  name="optradio" checked={this.state.selectedOption === 'nic'} onChange={this.selectRadio}></input>NIC</label>
                                         </div>
                                         <div className="col-xs-7 col-sm-7">                                    
                                             <label for="passportRadio" className="radioText"><input type="radio" id="passportRadio"  name="optradio" checked={this.state.selectedOption === 'passport'} onChange={this.selectRadio}></input>PASSPORT</label>                                    
+=======
+                                                <label for="nicRadio"><input type="radio" id="nicRadio" name="optradio" checked={this.state.selectedOption === 'nic'} onChange={this.selectRadio}></input>NIC</label>
+                                        </div>
+                                        <div className="col-xs-7 col-sm-7">                                    
+                                            <label for="passportRadio"><input type="radio" id="passportRadio" name="optradio" checked={this.state.selectedOption === 'passport'} onChange={this.selectRadio}></input>PASSPORT</label>                                    
+>>>>>>> 8804bf91324aae21c3810c936d803b8254427700
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-sm-9">
                                 
+<<<<<<< HEAD
                                     <input class="form_input fix" type="text" id="nicorpass" placeholder="NIC/Passport-Required"></input>
+=======
+                                    <input class="form_input" type="text" id="nicorpass" placeholder="NIC/Passport-Required"></input>
+>>>>>>> 8804bf91324aae21c3810c936d803b8254427700
                                     </div>
                                 </div>
                             <div/>
