@@ -20,7 +20,6 @@ class RefundRequest extends Component {
     loadRefundOptions(e){
 
         console.log("Loaded form:"+e.target.name);
-        alert(document.getElementById("form_ref_opt").value);
         
         if(e.target.id==="bnkBtn"||e.target.value===1){
             this.setState({ refundOption:  "bank" });
