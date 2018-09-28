@@ -15,17 +15,25 @@ class RefundRequest extends Component {
             refundOption: "bank"
 
         }
+    
     }
-
     loadRefundOptions(e){
 
         console.log("Loaded form:"+e.target.name);
-        if(e.target.id==="bnkBtn"||e.target.value===1)
+        alert(document.getElementById("form_ref_opt").value);
+        
+        if(e.target.id==="bnkBtn"||e.target.value===1){
             this.setState({ refundOption:  "bank" });
-        else if(e.target.id==="mblBtn"||e.target.value===2)
+            
+        }
+        else if(e.target.id==="mblBtn"||e.target.value===2){
             this.setState({ refundOption:  "mobile"  });
-        else
+            
+        }
+        else{
             this.setState({ refundOption:  "search"   });
+            
+        }
     }
 
 
@@ -33,6 +41,10 @@ class RefundRequest extends Component {
         var popup = document.getElementById("infoPopup");
         popup.classList.toggle("show");
         this.progress();    
+    }
+    componentDidUpdate(e){
+        let form = this.state.refundOption;
+        document.getElementById("form_ref_opt").value= form;
     }
     progress() {
         var elem = document.getElementById("myBar"); 
@@ -55,6 +67,8 @@ class RefundRequest extends Component {
         this.setState({refundOption: e.target.value});
     }
     render() { 
+        
+        
         let formoption;
         if(this.state.refundOption==="bank"){
             formoption= ( <BankRefund/> );
@@ -63,6 +77,7 @@ class RefundRequest extends Component {
         }else if(this.state.refundOption==="search"){
             formoption=(<RefundSearch/>);
         }
+         
       
         return ( 
             <div className="refund">
@@ -100,7 +115,7 @@ class RefundRequest extends Component {
                         </div>
                         {/*Mobile Form Options*/}
                         <div class="form_option_mobile">
-                            <select value={this.state.formoption} onChange={this.handleFormSelect}>
+                            <select value={this.state.formoption} id="form_ref_opt" onChange={this.handleFormSelect}>
                                 <option value="bank" >Bank Refund</option>
                                 <option value="mobile" >Mobile Bill/Reload Refund</option>
                                 <option value="search" >Refund Search</option>
