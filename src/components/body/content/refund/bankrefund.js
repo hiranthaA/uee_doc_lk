@@ -40,13 +40,18 @@ class BankRefund extends Component {
         
     }
     holdValidate(){
+
         var holder = document.getElementById("holderName").value;
-        if(holder===""){
+
+        var holder2 = document.getElementById("holderName2").value;
+
+
+        if(holder==="" && holder2===""){
             return false;
         }
         var format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
 
-        if(format.test(holder)){
+        if(format.test(holder)||format.test(holder2)){
             return false;
         } else {
             
@@ -130,6 +135,12 @@ class BankRefund extends Component {
             }
         }
     }
+    fillArea(){
+        document.getElementById("holderName2").value = document.getElementById("holderName").value;
+    }
+    fillInput(){
+        document.getElementById("holderName").value = document.getElementById("holderName2").value;
+    }
     render() { 
         
        
@@ -156,10 +167,12 @@ class BankRefund extends Component {
                     <hr/>
                     <div className="row">
                         <div className="col-4">
-                            <label for="holderName">BANK ACCOUNT HOLDER NAME<font color="red">*</font></label>
+                            <label className="wrapper" for="holderName">BANK ACCOUNT HOLDER NAME<font color="red">*</font></label>
+                            <label className="wrapped" for="holderName2">BANK ACCOUNT HOLDER NAME<font color="red">*</font></label>
                         </div>
                         <div className="col-8">
-                            <input class="form_input" type="text" id="holderName" placeholder="Bank Account Holder Name-Required"></input>
+                            <input class="form_input wrapper" type="text" id="holderName" placeholder="Bank Account Holder Name-Required" onKeyUp={this.fillArea}></input>
+                            <textarea name="text" wrap="soft" className="wrapped form_input" id="holderName2" placeholder="Bank Account Holder Name-Required" onKeyUp={this.fillInput} ></textarea>
                         </div>
                     </div>
                     <hr/>
