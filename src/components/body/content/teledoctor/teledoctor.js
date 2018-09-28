@@ -269,7 +269,7 @@ class TeleDoctor extends Component {
 
                 <div className="form-group row">
                     <div className="col-12">
-                        <button type="submit" className="btn btnsubmit btn-danger" onClick={this.validate}>Continue</button>
+                        <button type="button" className="btn btnsubmit btn-danger" onClick={this.validate}>Continue</button>
                     </div>
                 </div>
 
