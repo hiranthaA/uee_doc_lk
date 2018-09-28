@@ -33,7 +33,7 @@ class LandingPage extends Component {
 
                     </div>
                     <div className="d-flex justify-content-center col-xl-2 col-lg-2 col-md-4 col-sm-6 col-12">
-                        <div class="card thumbnail border-danger mb-3">
+                        <div class="card thumbnail border-danger mb-3" onClick={() => this.props.setMainBodyContent("med")}>
                             <div class="card-body text-danger">
                                 <img src="pills.png" width="60" height="60"  alt="" onClick={() => this.props.setMainBodyContent("med")}/>
                                 <h5 class="card-title">Medicine</h5>
@@ -42,7 +42,7 @@ class LandingPage extends Component {
                         </div>
                     </div>
                     <div className="d-flex justify-content-center col-xl-2 col-lg-2 col-md-4 col-sm-6 col-12">
-                        <div class="card thumbnail border-danger mb-3">
+                        <div class="card thumbnail border-danger mb-3" onClick={() => this.props.setMainBodyContent("tele")}>
                             <div class="card-body text-danger">
                                 <img src="telephone.png" width="60" height="60" alt="" onClick={() => this.props.setMainBodyContent("tele")}/>
                                 <h5 class="card-title">Tele Doctor</h5>
