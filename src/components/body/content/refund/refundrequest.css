@@ -103,7 +103,7 @@ label{
     border-radius: 5px;
     padding-left: 15px;
 }
-.container input{
+/* .container input{
     position: relative;
     border-radius: 10px;
     opacity: 100;
@@ -112,7 +112,7 @@ label{
     outline-color: aquamarine;
     -moz-outline-radius:20px;
 
-}
+} */
 
 .form_input{
     display: block;
