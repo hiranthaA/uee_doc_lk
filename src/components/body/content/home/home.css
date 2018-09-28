@@ -2,6 +2,7 @@
     max-width: 12rem;
     min-width: 10rem;
     margin : 10px;
+    cursor: pointer;
 }
 
 .ChannelDocthumbnail{
