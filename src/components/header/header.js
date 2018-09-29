@@ -65,7 +65,7 @@ class Header extends Component {
                         </ul>
                         <form class="form-inline my-2 my-lg-0">
                             <button className="btn btnreg btn-outline-dark text-white my-2 my-sm-0" type="button" onClick={()=> this.props.setBodyContent("reg")}>Registration</button>
-                            <button className="btn btnlogin btn-outline-success text-white my-2 my-sm-0" data-toggle="modal" data-target="#loginModal" type="button">{this.state.loginbtnvalue}</button>
+                            <button className="btn btnlogin btn-outline-dark text-white my-2 my-sm-0" data-toggle="modal" data-target="#loginModal" type="button">{this.state.loginbtnvalue}</button>
                         </form>
                     </div>
                 </nav>
@@ -76,7 +76,7 @@ class Header extends Component {
                     <div class="modal-dialog" role="document">
                     <div class="modal-content">
                     <div className="modal-header bg-danger text-white">
-                    <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-user-plus"></i>Login</h5>
+                    <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-user-plus"></i> Login</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>

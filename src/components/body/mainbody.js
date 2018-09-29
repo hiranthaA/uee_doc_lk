@@ -35,7 +35,7 @@ class MainBody extends Component {
         }
         else if(this.state.loadedContent==="reg"){
             loadcontent = (
-                <Registration/>
+                <Registration setMainBodyContent={this.setMainBodyContent}/>
             );
         }
         else if(this.state.loadedContent==="tele"){

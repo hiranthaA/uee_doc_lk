@@ -5,6 +5,7 @@ class Registration extends Component {
     constructor(props) {
         super(props);
         this.setSelectedValue=this.setSelectedValue.bind(this);
+        this.reg = this.reg.bind(this);
         this.state = {
             selectedValue: 'yes',
         };
@@ -187,6 +188,7 @@ class Registration extends Component {
             document.getElementById('email1').value="";
             document.getElementById('mobile').value="";
             document.getElementById('pwd').value="";
+            this.props.setMainBodyContent("home");
 
         }else {
             swal({
