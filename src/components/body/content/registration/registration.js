@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import swal from 'sweetalert';
 
 class Registration extends Component {
     constructor(props) {
@@ -22,7 +23,7 @@ class Registration extends Component {
             nicpassport = (
                 <div className="form-group">
                     <label id="label">NIC Number*</label>
-                    <input type="text" className="form-control" id="nic" placeholder="E.g.123456789V" required></input>
+                    <input type="text" className="form-control" id="nic" placeholder="E.g.123456789V" ></input>
                 </div>
             );
         }
@@ -30,7 +31,7 @@ class Registration extends Component {
             nicpassport = (
                 <div className="form-group">
                     <label id="label">Passport Number*</label>
-                    <input type="text" className="form-control" id="nic" placeholder="E.g.741258963" required></input>
+                    <input type="text" className="form-control" id="nic" placeholder="E.g.741258963" ></input>
                 </div>
             );
         }
@@ -47,7 +48,7 @@ class Registration extends Component {
                                         <h4 className="heading "><i class="fas fa-user-plus"></i> Welcome, Please Sign Up</h4>
                                     </div>
                                     <div className="card-body">
-                                        <form onSubmit={this.reg}>
+                                       {/* <form>*/}
                                             <div className="row">
                                                 <div className="offset-sm-1 col-sm-12 col-md-12 col-lg-5 ">
 
@@ -104,7 +105,7 @@ class Registration extends Component {
                                                         <div className="col-md-9 col-sm-10 col-lg-12">
                                                             <div className="form-group">
                                                                 <label id="label">Email Address*</label>
-                                                                <input type="email" className="form-control" id="email" placeholder="E.g.youremail@doc.lk" required></input>
+                                                                <input type="email" className="form-control" id="email1" placeholder="E.g.youremail@doc.lk" ></input>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -113,7 +114,7 @@ class Registration extends Component {
                                                         <div className="col-md-9 col-sm-10 col-lg-12">
                                                             <div className="form-group">
                                                                 <label id="label">Mobile Phone Number*</label>
-                                                                <input type="number" className="form-control" id="mobile" placeholder="E.g.0711111111" required></input>
+                                                                <input type="number" className="form-control" id="mobile" placeholder="E.g.0711111111" ></input>
                                                             </div>
                                                         </div>
 
@@ -127,14 +128,14 @@ class Registration extends Component {
                                                     <div class="form-group row" >
                                                         <div className="col-md-12 col-sm-11 col-lg-10">
                                                             <label className="grey-text">Password*</label>
-                                                            <input type="password" id="defaultFormRegisterPasswrdEx" placeholder="Type Here" className="form-control w-100" required   />
+                                                            <input type="password" id="pwd" placeholder="Type Here" className="form-control w-100"    />
                                                         </div>
                                                     </div>
 
                                                     <div class="form-group row">
                                                         <div className="col-md-12 col-sm-11 col-lg-10 ">
                                                             <label className="grey-text">Confirm Password*</label>
-                                                            <input type="password" id="defaultFormRegisterPasswrdConEx" placeholder="Type Here" className="form-control w-100" required/><br />
+                                                            <input type="password" id="defaultFormRegisterPasswrdConEx" placeholder="Type Here" className="form-control w-100" /><br />
                                                         </div>
                                                     </div>
 
@@ -147,14 +148,14 @@ class Registration extends Component {
 
                                                     <div class="form-group row">
                                                         <div class="offset-sm-0 col-sm-8 col-md-9 col-lg-11 pb-3 pt-2">
-                                                            <button type="submit" class="btn btn-outline-primary btn-block" >Register</button>
+                                                            <button onClick={this.reg} class="btn btn-outline-primary btn-block" >Register</button>
                                                         </div>
                                                     </div>
                                                 </div>
 
                                             </div>
 
-                                        </form>
+                                        {/*</form>*/}
                                     </div>
 
                                 </div>
@@ -168,8 +169,33 @@ class Registration extends Component {
     }
 
     reg(){
-        alert('Registration Succesfull !');
-        window.location.reload(true);
+        var tit = document.getElementById('TitleStatus').value;
+        var name = document.getElementById('fullName').value;
+        var cpw = document.getElementById('defaultFormRegisterPasswrdConEx').value;
+        var email = document.getElementById('email1').value;
+        var mob = document.getElementById('mobile').value;
+        var pw = document.getElementById('pwd').value;
+        if(tit!="" && name!="" && cpw!="" && mob!="" && pw!="" && email!=""){
+            swal({
+                title: "Congrats!",
+                text: "Your Account is created",
+                icon: "success",
+                confirmButtonText: "ok"
+            });
+            document.getElementById('fullName').value="";
+            document.getElementById('defaultFormRegisterPasswrdConEx').value="";
+            document.getElementById('email1').value="";
+            document.getElementById('mobile').value="";
+            document.getElementById('pwd').value="";
+
+        }else {
+            swal({
+                title: "All Fields Required!",
+                icon: "error",
+                type: "warning",
+            });
+
+        }
     }
 }
  

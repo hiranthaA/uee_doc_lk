@@ -1,10 +1,37 @@
 import React, { Component } from 'react';
 import './header.css';
-
+import swal from 'sweetalert';
 class Header extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.setLoginButtonValue = this.setLoginButtonValue.bind(this);
+        this.login = this.login.bind(this);
+        this.state = {
+            loginbtnvalue : "Login"
+        }
+    }
+
+    setLoginButtonValue(status){
+        this.setState({loginbtnvalue: status});
+    }
+
+    login(){
+        var email=document.getElementById('email').value;
+        var pw =document.getElementById('defaultFormRegisterPasswrdEx').value;
+        if(email == "" || pw == ""){
+            swal({
+                title: "Login Failed!",
+                icon: "error",
+                type: "warning",
+            });
+        }else {
+            swal({
+                title: "Login success!",
+                icon: "success",
+                type: "warning",
+            });
+            this.setLoginButtonValue("Logout");
+        }
     }
     render() {
         return (
@@ -38,13 +65,39 @@ class Header extends Component {
                         </ul>
                         <form class="form-inline my-2 my-lg-0">
                             <button className="btn btnreg btn-outline-dark text-white my-2 my-sm-0" type="button" onClick={()=> this.props.setBodyContent("reg")}>Registration</button>
-                            <button className="btn btnlogin btn-outline-dark text-white my-2 my-sm-0" type="button">Login</button>
+                            <button className="btn btnlogin btn-outline-success text-white my-2 my-sm-0" data-toggle="modal" data-target="#loginModal" type="button">{this.state.loginbtnvalue}</button>
                         </form>
                     </div>
                 </nav>
                 <br/>
                 <br/>
                 <br/>
+                <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <div className="modal-header bg-danger text-white">
+                    <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-user-plus"></i>Login</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group row col-md-12 col-sm-11 col-lg-10">
+                    <input type="email" className="form-control" id="email" placeholder="Email" required></input>
+                </div>
+                <div class="form-group row col-md-12 col-sm-11 col-lg-10">
+                    <input type="password" id="defaultFormRegisterPasswrdEx" placeholder="Password" className="form-control w-100" required   />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal" onClick={this.login}>Login</button>
+                </div>
+                </div>
+
+
+                </div>
+                </div>
+                </div>
             </div>
         );
     }
