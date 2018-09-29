@@ -179,7 +179,7 @@
 }
 
 /* Tooltip text */
-.totooltipRefundltip .tooltipRefundText {
+.tooltipRefund .tooltipRefundText {
     visibility: hidden;
     width: 150vd;
     background-color: rgb(1, 15, 27);

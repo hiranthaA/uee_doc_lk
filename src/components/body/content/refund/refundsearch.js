@@ -123,7 +123,7 @@ class RefundSearch extends Component {
                     <div className="row rowClassRefund">
                         <div className="col-4">
                             <label for="refID" className="labelClassRefund">REFERENCE NO<font color="red">*</font></label>
-                            <label for="refID" className="labelClassRefund">REFERENCE NO<font color="red">*</font></label>
+                            
                         </div>
                         <div className="col-8">
                             <input class="form_input_refund" type="text" id="refID" placeholder="Reference No-Required"></input>
