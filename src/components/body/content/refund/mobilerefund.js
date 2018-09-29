@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import React, { Component } from 'react';
+
 import "./refundrequest.css";
 
 class MobileRefund extends Component {
@@ -128,7 +128,7 @@ class MobileRefund extends Component {
                             <label for="mobileNum" className="labelClassRefund">MOBILE NO / CDMA NO<font color="red">*</font></label>
                         </div>
                         <div className="col-8">
-                            <div className="flexContainerRef">
+                            <div className="flexContainerRefund">
                                 <input class="inputFlexRefund" type="text" id="mobileNum" placeholder="Mobile No/CDMA No-Required"></input>
                                 <button className="roundBtnRefund tooltipRefund" onClick={this.popupShow} id="infoMob">?<span className="tooltipRefundText" id="helpTip"><p><font size="5px">This service is available for
                                                     <hr/><small>
