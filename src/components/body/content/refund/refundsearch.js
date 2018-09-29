@@ -111,7 +111,7 @@ class RefundSearch extends Component {
         return ( 
             <div className="card h-100 border-danger">
                 {/*Top Header*/}
-                <div className="row typeHeader card-header bg-danger text-white">
+                <div className="row prow typeHeader card-header bg-danger text-white">
                 
                     <div className="col-12">
                         <h2>Refund Search</h2>
@@ -120,7 +120,7 @@ class RefundSearch extends Component {
                 <br/>
                 {/*Content Form*/}
                 <div className="card-body">
-                    <div className="row">
+                    <div className="row prow">
                         <div className="col-4">
                             <label for="refID">REFERENCE NO<font color="red">*</font></label>
                         </div>
@@ -130,18 +130,18 @@ class RefundSearch extends Component {
                     </div>
                     <hr/>
 
-                    <div className="row">
+                    <div className="row prow">
                         <div className="col-4">
-                            <div className="row">
+                            <div className="row prow">
                                 
                                     <label for="nicorpass">NIC/Passport<font color="red">*</font></label>
                                 
                             </div>
                         </div>
                         <div className="col-8">
-                            <div class="row">
+                            <div class="row prow">
                                 <div className="col-sm-3">
-                                    <div class="row">
+                                    <div class="row prow">
                 
                                         <div className="col-xs-5 col-sm-5">                                        
                                                 <label for="nicRadio" className="radioText"><input type="radio" id="nicRadio"  name="optradio" checked={this.state.selectedOption === 'nic'} onChange={this.selectRadio}></input>NIC</label>

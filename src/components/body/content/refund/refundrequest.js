@@ -81,7 +81,7 @@ class RefundRequest extends Component {
         return ( 
             <div className="refund">
                 {/*Top Header*/}
-                <div className="row">
+                <div className="row prow">
                 
                     <div className="col head">
                         <h2><font size="100%">Refund Request</font></h2>
@@ -93,11 +93,11 @@ class RefundRequest extends Component {
                 </div>
                 <br/>
                 {/*Button Content*/}
-                <div className="row">
+                <div className="row prow">
                     <div className="col">
                     {/* Desktop Form Options */}
                         <div class="form_option" >
-                            <div className="row">
+                            <div className="row prow">
                                 <div className="col">
                                             <button type="button" className="btn btn-block headBtn" id="bnkBtn" name="Bank Refund" onClick={this.loadRefundOptions}>Bank Refund</button>
                                 </div>
@@ -126,7 +126,7 @@ class RefundRequest extends Component {
                 </div>
                <hr/>
                {formoption}
-               <div className="row">
+               <div className="row prow">
                <div className="col-9"></div>
                 <div className="col-1"  onClick={this.popupShow}>
                         <div class="popup">
