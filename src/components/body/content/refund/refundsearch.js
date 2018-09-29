@@ -123,7 +123,7 @@ class RefundSearch extends Component {
                     <div className="row rowClassRefund">
                         <div className="col-4">
                             <label for="refID" className="labelClassRefund">REFERENCE NO<font color="red">*</font></label>
-                            <label for="refID" className="labelClassRefund">REFERENCE NO<font color="red">*</font></label>
+                            
                         </div>
                         <div className="col-8">
                             <input class="form_input_refund" type="text" id="refID" placeholder="Reference No-Required"></input>
@@ -141,8 +141,8 @@ class RefundSearch extends Component {
                         </div>
                         <div className="col-8">
                             <div class="row rowClassRefund">
-                                <div className="col-sm-3">
-                                    <div class="row rowClassRefund">
+                                <div className="col-sm-5">
+                                    <div class="row rowClassRefund radioRefund">
                 
                                         <div className="col-xs-5 col-sm-5">                                        
                                                 <label for="nicRadio" className="radioTextRefund" className="labelClassRefund"><input type="radio" id="nicRadio"  name="optradio" checked={this.state.selectedOption === 'nic'} onChange={this.selectRadio}></input>NIC</label>
@@ -152,7 +152,7 @@ class RefundSearch extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-sm-9">
+                                <div className="col-sm-8">
                                 
                                     <input class="form_input_refund fixRefund" type="text" id="nicorpass" placeholder="NIC/Passport-Required"></input>
                                     </div>

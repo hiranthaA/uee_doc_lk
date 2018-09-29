@@ -186,7 +186,7 @@ class BankRefund extends Component {
                         <div class="clearfix visible-xs"></div>
                         <div className="col-6"></div>
                         <div className="col-6">
-                            <select class="formBankOptionRefund_bank_option" id="bankSelect" for="bankName" value={this.state.selectedBank} onChange={this.handleBankSelect}>
+                            <select class="formBankOptionRefund" id="bankSelect" for="bankName" value={this.state.selectedBank} onChange={this.handleBankSelect}>
                                 <option value="1">Bank Of Ceylon</option>
                                 <option value="2">Commercial Bank</option>
                                 <option value="3">Nations Trust Bank</option>

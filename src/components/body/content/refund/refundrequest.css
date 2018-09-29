@@ -82,7 +82,7 @@
 
 }
 
-.flexContainerRef{
+.flexContainerRefund{
     display: flex;
     outline: none; 
     text-align: center; 
@@ -179,7 +179,7 @@
 }
 
 /* Tooltip text */
-.totooltipRefundltip .tooltipRefundText {
+.tooltipRefund .tooltipRefundText {
     visibility: hidden;
     width: 150vd;
     background-color: rgb(1, 15, 27);
@@ -357,6 +357,9 @@
     .formBankOptionRefund{
         font-size: 18px;
         height:30px
+    }
+    .radioRefund{
+        font-size: 13px;
     }
 
 }

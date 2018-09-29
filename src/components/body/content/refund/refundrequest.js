@@ -68,15 +68,15 @@ class RefundRequest extends Component {
                         <div class="form_option_Refund" >
                             <div className="row rowClassRefund">
                                 <div className="col">
-                                            <button type="button" className="btn btn-block headBtnRefund btnRefund" id="bnkBtn" name="Bank Refund" onClick={this.loadRefundOptions}>Bank Refund</button>
+                                            <button type="button" className="btn btn-block headBtnRefund " id="bnkBtn" name="Bank Refund" onClick={this.loadRefundOptions}>Bank Refund</button>
                                 </div>
                                 <br/><br/>  
                                 <div className="col">
-                                            <button type="button" className="btn btn-block headBtnRefund btnRefund" id="mblBtn" name="Mobile Refund" onClick={this.loadRefundOptions}>Mobile Bill/Reload Refund</button>
+                                            <button type="button" className="btn btn-block headBtnRefund " id="mblBtn" name="Mobile Refund" onClick={this.loadRefundOptions}>Mobile Bill/Reload Refund</button>
                                 </div>
                                 <br/><br/>     
                                 <div className="col">
-                                            <button type="button" className="btn btn-block headBtnRefund btnRefund" id="srchBtn" name="Refund Search" onClick={this.loadRefundOptions}>Refund Search</button>                        
+                                            <button type="button" className="btn btn-block headBtnRefund " id="srchBtn" name="Refund Search" onClick={this.loadRefundOptions}>Refund Search</button>                        
                                         
                                 </div>
                             </div>
