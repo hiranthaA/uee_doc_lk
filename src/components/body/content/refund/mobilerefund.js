@@ -103,7 +103,7 @@ class MobileRefund extends Component {
         return ( 
             <div className="card h-100 border-danger" >
                 {/*Top Header*/}
-                <div className="row typeHeader card-header bg-danger text-white" >
+                <div className="row prow typeHeader card-header bg-danger text-white" >
                     
                     <div className="col-sm-12">
                         <h2>Mobile Bill / Reload Refund</h2>
@@ -112,7 +112,7 @@ class MobileRefund extends Component {
                 <br/>
                 {/*Content Form*/}
                 <div className="card-body">
-                    <div className="row ">
+                    <div className="row prow">
                         <div className="col-4">
                             <label for="refID">REFERENCE NO<font color="red">*</font></label>
                         </div>
@@ -122,7 +122,7 @@ class MobileRefund extends Component {
                     </div>
                     <hr/>
 
-                    <div className="row">
+                    <div className="row prow">
                         <div className="col-4">
                             <label for="mobileNum">MOBILE NO / CDMA NO<font color="red">*</font></label>
                         </div>
@@ -148,7 +148,7 @@ class MobileRefund extends Component {
                     </div>
                     <hr/>
                     
-                    <div className="row">
+                    <div className="row prow">
                         <div className="col-4">
                             <label for="refRem">REFUND REMARKS</label>
                         </div>

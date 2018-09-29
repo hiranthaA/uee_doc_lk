@@ -147,7 +147,7 @@ class BankRefund extends Component {
         return ( 
             <div className="card h-100 border-danger">
                 {/*Top Header*/}
-                <div className="row typeHeader card-header bg-danger text-white">
+                <div className="row prow typeHeader card-header bg-danger text-white">
                 
                     <div className="col-12">
                         <h2>Bank Refund</h2>
@@ -156,7 +156,7 @@ class BankRefund extends Component {
                 <br/>
                 {/*Content Form*/}
                 <div className="card-body">
-                    <div className="row">
+                    <div className="row prow">
                         <div className="col-4">
                             <label for="refID">REFERENCE NO<font color="red">*</font></label>
                         </div>
@@ -165,7 +165,7 @@ class BankRefund extends Component {
                         </div>
                     </div>
                     <hr/>
-                    <div className="row">
+                    <div className="row prow">
                         <div className="col-4">
                             <label className="wrapper" for="holderName">BANK ACCOUNT HOLDER NAME<font color="red">*</font></label>
                             <label className="wrapped" for="holderName2">BANK ACCOUNT HOLDER NAME<font color="red">*</font></label>
@@ -176,7 +176,7 @@ class BankRefund extends Component {
                         </div>
                     </div>
                     <hr/>
-                    <div className="row">
+                    <div className="row prow">
                         <div className="col-4">
                             <label for="accNO">BANK ACCOUNT NO<font color="red">*</font></label>
                         </div>
@@ -185,7 +185,7 @@ class BankRefund extends Component {
                         </div>
                     </div>
                     <hr/>
-                    <div className="row">
+                    <div className="row prow">
                         <div className="col-4">
                             <label for="bankName">BANK NAME<font color="red">*</font></label>
                         </div>
@@ -209,7 +209,7 @@ class BankRefund extends Component {
                         
                     </div>
                     <hr/>
-                    <div className="row">
+                    <div className="row prow">
                         <div className="col-4">
                             <label for="refRem">REFUND REMARKS</label>
                         </div>
