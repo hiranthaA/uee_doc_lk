@@ -16,11 +16,11 @@ class Echanneling extends Component {
                     <div class="row">
                         <div class="col-sm-12 col-md-12">
                             <div class="row">
-                                <div class="col-sm-4 col-md-6">
+                                <div class="col-sm-6 col-md-6 text-left">
                                     <label className="e-fonts" for="exampleInputEmail1">Doctor Name</label>
                                     <input type="email" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Dcotor Name" />
                                 </div>
-                                <div class="col-sm-4 col-md-6">
+                                <div class="col-sm-6 col-md-6 text-left">
                                     <label className="e-fonts" for="inputState">Specialization</label>
                                     <select id="inputState" class="form-control form-control-sm">
                                         <option selected>Choose...</option>
@@ -47,7 +47,7 @@ class Echanneling extends Component {
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-3 col-md-6">
+                                <div class="col-sm-6 col-md-6 text-left">
                                     <label className="e-fonts" for="inputState">Hospital/Channeling Center</label>
                                     <select id="inputState" class="form-control form-control-sm">
                                         <option selected>Choose...</option>
@@ -64,7 +64,7 @@ class Echanneling extends Component {
                                         <option>Moratuwa Medical Centre (Pvt) Ltd.</option>
                                     </select>
                                 </div>
-                                <div class="col-sm-3 col-md-6">
+                                <div class="col-sm-6 col-md-6 text-left">
                                     <label className="e-fonts" for="exampleInputEmail1">Prefered District</label>
                                     <select id="inputState" class="form-control form-control-sm">
                                         <option selected>Choose...</option>
@@ -97,15 +97,15 @@ class Echanneling extends Component {
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-3 col-md-2">
+                                <div class="col-sm-2 col-md-2 text-left">
                                     <label className="e-fonts" for="inputState">Date</label>
                                     <input type="date" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp" />
                                 </div>
-                                <div class="col-sm-3 col-md-2">
+                                <div class="col-sm-2 col-md-2 text-left">
                                     <label className="e-fonts" for="inputState">From Time</label>
                                     <input type="number" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp" />
                                 </div>
-                                <div class="col-sm-3 col-md-2">
+                                <div class="col-sm-2 col-md-2 text-left">
                                     <label className="e-fonts" for="inputState">To Time</label>
                                     <input type="number" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp" />
                                 </div>
@@ -263,19 +263,51 @@ class Echanneling extends Component {
                                 </button>
                             </div>
                             <div class="modal-body">
-
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Pay</button>
-                                <button type="button" class="btn btn-danger">Cancel</button>
+                                <div className="card bg-light">
+                                    <div className="row">
+                                        <div className="col-12">
+                                            <ul class="list-group">
+                                                <label className="text-left p-2"><b>Select Your Payment Method</b></label>
+                                                <li class="list-group-item d-flex justify-content-between align-items-left">
+                                                    <div class="custom-control custom-checkbox mr-sm-2">
+                                                    <input type="checkbox" class="custom-control-input" id="customControlAutosizing"/>
+                                                    <label class="custom-control-label" for="customControlAutosizing"><i class="fab fa-cc-mastercard fa-3x"></i></label>
+                                                     </div>
+                                                </li>
+                                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                    <div class="custom-control custom-checkbox mr-sm-2">
+                                                    <input type="checkbox" class="custom-control-input" id="customControlAutosizing1"/>
+                                                    <label class="custom-control-label" for="customControlAutosizing1"><i class="fab fa-cc-visa fa-3x"></i></label>
+                                                     </div>
+                                                    </li>
+                                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                    <div class="custom-control custom-checkbox mr-sm-2">
+                                                    <input type="checkbox" class="custom-control-input" id="customControlAutosizing2"/>
+                                                    <label class="custom-control-label" for="customControlAutosizing2"> <i class="fab fa-cc-discover fa-3x"></i></label>
+                                                     </div>
+                                                    </li>
+                                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                    <div class="custom-control custom-checkbox mr-sm-2">
+                                                    <input type="checkbox" class="custom-control-input" id="customControlAutosizing3"/>
+                                                    <label class="custom-control-label" for="customControlAutosizing3"> <i class="fab fa-cc-paypal fa-3x"></i></label>
+                                                     </div>
+                                                    </li>
+                                            </ul>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Proceed</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-            </div >
-        );
-    }
-}
-
+                </div >
+                );
+            }
+        }
+        
 export default Echanneling;
