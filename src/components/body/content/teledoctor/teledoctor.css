@@ -142,3 +142,12 @@
     padding-right: 10px; 
 }
 }
+
+.no-side-margin{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.top-padding-10{
+    padding-top: 10px;
+}
