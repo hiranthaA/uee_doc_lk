@@ -42,9 +42,9 @@ class TeleDoctor extends Component {
 
     render() {
         let nicOrPp = (
-            <div className="form-group myfg row" id="nicDiv">
+            <div className="form-group myfg row no-side-margin" id="nicDiv">
             <div className="col-12">
-                <div className="row">
+                <div className="row no-side-margin">
                     <div className="col-3 text-left">
                         <label for="nic" className=" col-form-label">NIC</label>
                     </div>
@@ -57,9 +57,9 @@ class TeleDoctor extends Component {
         );
         if (this.state.selectedOption === "radioForeign") {
             nicOrPp = (
-                <div className="form-group myfg row" id="ppDiv">
+                <div className="form-group myfg row no-side-margin" id="ppDiv">
                 <div className="col-12">
-                    <div className="row">
+                    <div className="row no-side-margin">
                         <div className="col-3 text-left">
                             <label for="passport" className=" col-form-label">Passport</label>
                         </div>
@@ -73,10 +73,10 @@ class TeleDoctor extends Component {
         }
         return (
             <div>
-                <div class="row">
+                <div class="row no-side-margin">
                     <div className="col-md-4">
                     <div className="border border-dark height-285">
-                        <div class="row justify-content-around" >
+                        <div class="row no-side-margin justify-content-around" >
                             <div className="col-md-auto
                              col-sm-auto col-auto no-side-padding">
                                 <div className="float-right">
@@ -111,7 +111,7 @@ class TeleDoctor extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div class="row res-dr-name-big">
+                        <div class="row no-side-margin res-dr-name-big">
                             <div className="col-md-12 text-danger text-left">
                                 <h3>Dr. C.A. Mendis</h3>
                                 <h5>Eye Surgeon</h5>
@@ -122,12 +122,12 @@ class TeleDoctor extends Component {
                     </div>
                     <div className="col-md-8 cratings height-285">
                         <div className="border border-dark height-285">
-                            <div class="row">
+                            <div class="row no-side-margin">
                                 <div className="col-md-12 text-left padding-2-p">
                                     <h4>Reviews:</h4>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row no-side-margin">
                                 <div className="col-md-6 text-left border padding-2-p">
                                     <h5>Saman</h5>
                                     <div className="small-star">
@@ -151,7 +151,7 @@ class TeleDoctor extends Component {
                                     <h6>Excelent Service. Diagnosis was 100% acccurate</h6>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row no-side-margin">
                                 <div className="col-md-6 text-left border padding-2-p">
                                     <h5>Nuwan</h5>
                                     <div className="small-star">
@@ -179,7 +179,7 @@ class TeleDoctor extends Component {
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row no-side-margin">
                 <div className="col-12">
                 <div className="border border-dark text-center marging-padding-top">
 
@@ -193,15 +193,15 @@ class TeleDoctor extends Component {
                 </div>
                 </div>
 
-                <div class="row">
+                <div class="row no-side-margin">
                 <div className="col-12">
                 <div className="border border-dark text-center marging-padding-top">
 
-                <form id="myForm">
+                <form id="myForm" class="top-padding-10">
 
-                <div className="form-group myfg row">
+                <div className="form-group myfg row no-side-margin">
                     <div className="col-12">
-                        <div className="row">
+                        <div className="row no-side-margin">
                             <div className="col-3 text-left">
                                 <label for="name" className=" col-form-label">Name</label>
                             </div>
@@ -212,9 +212,9 @@ class TeleDoctor extends Component {
                     </div>
                 </div>
 
-                <div className="form-group myfg row">
+                <div className="form-group myfg row no-side-margin">
                     <div className="col-12">
-                        <div className="row">
+                        <div className="row no-side-margin">
                             <div className="col-3 text-left">
                                 <label for="phone" className=" col-form-label">Phone</label>
                             </div>
@@ -225,9 +225,9 @@ class TeleDoctor extends Component {
                     </div>
                 </div>                
 
-                <div className="form-group myfg row">
+                <div className="form-group myfg row no-side-margin">
                     <div className="col-12">
-                        <div className="row">
+                        <div className="row no-side-margin">
                             <div className="col-3 text-left">
                                 <label className=" col-form-label">Nationality</label>
                             </div>
@@ -254,9 +254,9 @@ class TeleDoctor extends Component {
                     </div>
                 </div>
                 {nicOrPp}
-                <div className="form-group myfg row">
+                <div className="form-group myfg row no-side-margin">
                     <div className="col-12">
-                        <div className="row">
+                        <div className="row no-side-margin">
                             <div className="col-3 text-left">
                                 <label for="email" className=" col-form-label">Email</label>
                             </div>
@@ -267,7 +267,7 @@ class TeleDoctor extends Component {
                     </div>
                 </div>
 
-                <div className="form-group row">
+                <div className="form-group row no-side-margin">
                     <div className="col-12">
                         <button type="button" className="btn btnsubmit btn-danger" onClick={this.validate}>Continue</button>
                     </div>
