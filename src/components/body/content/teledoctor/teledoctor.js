@@ -7,7 +7,12 @@ class TeleDoctor extends Component {
         this.nicOrPassport = this.nicOrPassport.bind(this);
         this.state = {
             selectedOption : "radioLocal",
+            time: {},
+            seconds: 120
         }
+        this.timer = 0;
+        this.startTimer = this.startTimer.bind(this);
+        this.countDown = this.countDown.bind(this);
     }
 
     nicOrPassport(e) {
@@ -39,6 +44,63 @@ class TeleDoctor extends Component {
             }
         }
     }
+
+    secondsToTime(secs){
+        console.log("secondsToTime(secs)");
+        let hours = Math.floor(secs / (60 * 60));
+    
+        let divisor_for_minutes = secs % (60 * 60);
+        let minutes = Math.floor(divisor_for_minutes / 60);
+        if(minutes<10){
+            minutes = "0"+minutes;
+        }
+    
+        let divisor_for_seconds = divisor_for_minutes % 60;
+        let seconds = Math.ceil(divisor_for_seconds);
+        if(seconds<10){
+            seconds = "0"+seconds;
+        }
+
+        let obj = {
+          "h": hours,
+          "m": minutes,
+          "s": seconds
+        };
+        return obj;
+      }
+    
+      componentDidMount() {
+        console.log("componentDidMount()");
+        let timeLeftVar = this.secondsToTime(this.state.seconds);
+        this.setState({ time: timeLeftVar });
+        this.startTimer();
+      }
+    
+      startTimer() {
+        console.log("startTimer()");
+
+        if (this.timer == 0 && this.state.seconds > 0) {
+          this.timer = setInterval(this.countDown, 1000);
+        }
+      }
+    
+      countDown() {
+        console.log("countDown()");
+
+        // Remove one second, set state so a re-render happens.
+        let seconds = this.state.seconds - 1;
+        this.setState({
+          time: this.secondsToTime(seconds),
+          seconds: seconds,
+        });
+        
+        // Check if we're at zero.
+        if (seconds == 0) { 
+          clearInterval(this.timer);
+          window.location.reload();
+        }
+      }
+
 
     render() {
         let nicOrPp = (
@@ -184,9 +246,11 @@ class TeleDoctor extends Component {
                 <div className="border border-dark text-center marging-padding-top">
 
                     <h5>Complete within:</h5>
+                    
                     <div class="progress complete-within-container container no-side-padding">
+                        <h5 className="remaining-time" id="remaining-time">{this.state.time.m}:{this.state.time.s}</h5>
                         <div class="progress-bar bg-danger complete-within align-self-center">
-                            <h5>03:45</h5>
+                            {/* <h5 className="remaining-time" id="remaining-time">03:45</h5> */}
                         </div>
                     </div>
                 </div>
