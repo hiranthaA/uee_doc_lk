@@ -97,6 +97,9 @@
 .complete-within {
     width:75%;
     height: 50px;
+    animation-name: example;
+    animation-duration: 120s;
+    animation-timing-function: linear;
 }
 
 .complete-within-container {
@@ -108,7 +111,7 @@
 
 @media (max-width: 767px) {
 .complete-within {
-    width:75%;
+    width:50%;
     height: 30px;
 }
 
@@ -150,4 +153,18 @@
 
 .top-padding-10{
     padding-top: 10px;
+}
+
+@keyframes example {
+    from {width: 100%;}
+    to {width: 0%;}
+}
+
+.remaining-time {
+    position: absolute;
+    left: 50%;
+    z-index: 1;
+    margin-left: -25px;
+    top: 50%;
+    margin-top: -12px;
 }
