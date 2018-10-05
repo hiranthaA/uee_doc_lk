@@ -49,7 +49,7 @@ class RefundSearch extends Component {
         this.progress();
     }
     progress() {
-        var elem = document.getElementById("refundProgressBar"); 
+        var elem = document.getElementById("myBar"); 
         var width = 10;
         var id = setInterval(frame, 1);
         function frame() {
@@ -111,50 +111,49 @@ class RefundSearch extends Component {
         return ( 
             <div className="card h-100 border-danger">
                 {/*Top Header*/}
-                <div className="row rowClassRefund typeHeaderRefund card-header bg-danger text-white">
+                <div className="row typeHeader card-header bg-danger text-white">
                 
-                    <div className="col-12">
+                    <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                         <h2>Refund Search</h2>
                     </div>
                 </div>
                 <br/>
                 {/*Content Form*/}
                 <div className="card-body">
-                    <div className="row rowClassRefund">
-                        <div className="col-4">
-                            <label for="refID" className="labelClassRefund">REFERENCE NO<font color="red">*</font></label>
-                            
+                    <div className="row">
+                        <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                            <label for="refID">REFERENCE NO<font color="red">*</font></label>
                         </div>
-                        <div className="col-8">
-                            <input class="form_input_refund" type="text" id="refID" placeholder="Reference No-Required"></input>
+                        <div className="col-xl-8 col-lg-8 col-md-8 col-sm-8">
+                            <input class="form_input" type="text" id="refID" placeholder="Reference No-Required"></input>
                         </div>
                     </div>
                     <hr/>
 
-                    <div className="row rowClassRefund">
-                        <div className="col-4">
-                            <div className="row rowClassRefund">
+                    <div className="row">
+                        <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                            <div className="row">
                                 
-                                    <label for="nicorpass" className="labelClassRefund">NIC/Passport<font color="red">*</font></label>
+                                    <label for="nicorpass">NIC/Passport<font color="red">*</font></label>
                                 
                             </div>
                         </div>
-                        <div className="col-8">
-                            <div class="row rowClassRefund">
-                                <div className="col-sm-5">
-                                    <div class="row rowClassRefund radioRefund">
+                        <div className="col-xl-8 col-lg-8 col-md-8 col-sm-8">
+                            <div class="row">
+                                <div className="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+                                    <div class="row">
                 
-                                        <div className="col-xs-5 col-sm-5">                                        
-                                                <label for="nicRadio" className="radioTextRefund" className="labelClassRefund"><input type="radio" id="nicRadio"  name="optradio" checked={this.state.selectedOption === 'nic'} onChange={this.selectRadio}></input>NIC</label>
+                                        <div className="col-xl-5 col-lg-5 col-md-5 col-sm-5">                                        
+                                                <label for="nicRadio" className="radioText"><input type="radio" id="nicRadio"  name="optradio" checked={this.state.selectedOption === 'nic'} onChange={this.selectRadio}></input>NIC</label>
                                         </div>
-                                        <div className="col-xs-7 col-sm-7">                                    
-                                            <label for="passportRadio" className="radioTextRefund" className="labelClassRefund"><input type="radio" id="passportRadio"  name="optradio" checked={this.state.selectedOption === 'passport'} onChange={this.selectRadio}></input>PASSPORT</label>                                    
+                                        <div className="col-xl-7 col-lg-7 col-md-7 col-sm-7">                                    
+                                            <label for="passportRadio" className="radioText"><input type="radio" id="passportRadio"  name="optradio" checked={this.state.selectedOption === 'passport'} onChange={this.selectRadio}></input>PASSPORT</label>                                    
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-sm-8">
+                                <div className="col-xl-9 col-lg-9 col-md-9 col-sm-9">
                                 
-                                    <input class="form_input_refund fixRefund" type="text" id="nicorpass" placeholder="NIC/Passport-Required"></input>
+                                    <input class="form_input fix" type="text" id="nicorpass" placeholder="NIC/Passport-Required"></input>
                                     </div>
                                 </div>
                             <div/>
@@ -163,8 +162,8 @@ class RefundSearch extends Component {
                     
                     <hr/>
 
-                    <br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                    <button className="btn btn-lg btn-warning btnRefund" onClick={this.validate}> Search</button>
+                    <br/><br/>
+                    <button className="btn btn-lg btn-warning" onClick={this.validate}> Search</button>
                 </div>
                 {/* Submit Success Dialog */}
                 <div className="modal fade" id="bankRefundSuccess" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -180,7 +179,7 @@ class RefundSearch extends Component {
                                 Successfully Submitted!
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-success btnRefund" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
@@ -199,7 +198,7 @@ class RefundSearch extends Component {
                                 Validation Failed!
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-danger btnRefund" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
