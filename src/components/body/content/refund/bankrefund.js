@@ -9,6 +9,9 @@ class BankRefund extends Component {
             selectedBank:"1"
         }
     }
+    /**
+     * Input validation method
+     */
     validate(){
         var validated = false;
         if(this.refValidate() & this.holdValidate() & this.accValidate() & this.bankValidate()){
@@ -40,13 +43,18 @@ class BankRefund extends Component {
         
     }
     holdValidate(){
+
         var holder = document.getElementById("holderName").value;
-        if(holder===""){
+
+        var holder2 = document.getElementById("holderName2").value;
+
+
+        if(holder==="" && holder2===""){
             return false;
         }
         var format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
 
-        if(format.test(holder)){
+        if(format.test(holder)||format.test(holder2)){
             return false;
         } else {
             
@@ -100,8 +108,11 @@ class BankRefund extends Component {
             document.getElementById("bankName").value="National Savings Bank";
         }
     }
+    /**
+     * Success progress bar
+     */
     progress() {
-        var elem = document.getElementById("refundProgressBar"); 
+        var elem = document.getElementById("myBar"); 
         var width = 10;
         var id = setInterval(frame, 1);
         function frame() {
@@ -115,10 +126,13 @@ class BankRefund extends Component {
             }
         }
     }
+    /**
+     * Error progress bar
+     */
     progressError() {
-        var elem = document.getElementById("refundProgressBar"); 
+        var elem = document.getElementById("myBar"); 
         var width = 10;
-        var id = setInterval(frame, 1);
+        var id = setInterval(frame, 0.5);
         function frame() {
             if (width >= 100) {
                 clearInterval(id);
@@ -130,13 +144,25 @@ class BankRefund extends Component {
             }
         }
     }
+    /**
+     * Text area controlled
+     */
+    fillArea(){
+        document.getElementById("holderName2").value = document.getElementById("holderName").value;
+    }
+    /**
+     * Text input controlled
+     */
+    fillInput(){
+        document.getElementById("holderName").value = document.getElementById("holderName2").value;
+    }
     render() { 
         
        
         return ( 
             <div className="card h-100 border-danger">
                 {/*Top Header*/}
-                <div className="row rowClassRefund typeHeaderRefund card-header bg-danger text-white">
+                <div className="row typeHeader card-header bg-danger text-white rowRefundRequest">
                 
                     <div className="col-12">
                         <h2>Bank Refund</h2>
@@ -145,48 +171,50 @@ class BankRefund extends Component {
                 <br/>
                 {/*Content Form*/}
                 <div className="card-body">
-                    <div className="row rowClassRefund">
-                        <div className="col-4">
-                            <label for="refID" className="labelClassRefund">REFERENCE NO<font color="red">*</font></label>
+                    <div className="row rowRefundRequest">
+                        <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                            <label className="labelRefund"  for="refID">REFERENCE NO<font color="red">*</font></label>
                         </div>
-                        <div className="col-8">
-                            <input class="form_input_refund" type="text" id="refID" placeholder="Reference No-Required"></input>
-                        </div>
-                    </div>
-                    <hr/>
-                    <div className="row rowClassRefund">
-                        <div className="col-4">
-                            <label for="holderName" className="labelClassRefund">BANK ACCOUNT HOLDER NAME<font color="red">*</font></label>
-                        </div>
-                        <div className="col-8">
-                            <input class="form_input_refund" type="text" id="holderName" placeholder="Bank Account Holder Name-Required"></input>
+                        <div className="col-xl-8 col-lg-8 col-md-8 col-sm-8">
+                            <input class="form_input" type="text" id="refID" placeholder="Reference No-Required"></input>
                         </div>
                     </div>
                     <hr/>
-                    <div className="row rowClassRefund">
-                        <div className="col-4">
-                            <label for="accNO" className="labelClassRefund">BANK ACCOUNT NO<font color="red">*</font></label>
+                    <div className="row rowRefundRequest">
+                        <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                            <label className="wrapper labelRefund" for="holderName">BANK ACCOUNT HOLDER NAME<font color="red">*</font></label>
+                            <label className="wrapped labelRefund" for="holderName2">BANK ACCOUNT HOLDER NAME<font color="red">*</font></label>
                         </div>
-                        <div className="col-8">
-                            <input class="form_input_refund" type="text" id="accNO" placeholder="Bank Account No-Required"></input>
+                        <div className="col-xl-8 col-lg-8 col-md-8 col-sm-8">
+                            <input class="form_input wrapper" type="text" id="holderName" placeholder="Bank Account Holder Name-Required" onKeyUp={this.fillArea}></input>
+                            <textarea name="text" wrap="soft" className="wrapped form_input" id="holderName2" placeholder="Bank Account Holder Name-Required" onKeyUp={this.fillInput} ></textarea>
                         </div>
                     </div>
                     <hr/>
-                    <div className="row rowClassRefund">
-                        <div className="col-4">
-                            <label for="bankName" className="labelClassRefund">BANK NAME<font color="red">*</font></label>
+                    <div className="row rowRefundRequest">
+                        <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4 ">
+                            <label for="accNO" className="labelRefund">BANK ACCOUNT NO<font color="red">*</font></label>
+                        </div>
+                        <div className="col-xl-8 col-lg-8 col-md-8 col-sm-8 ">
+                            <input class="form_input" type="text" id="accNO" placeholder="Bank Account No-Required"></input>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div className="row rowRefundRequest">
+                        <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                            <label for="bankName" className="labelRefund">BANK NAME<font color="red">*</font></label>
                         </div>
                         
-                        <div className="col-8">
+                        <div className="col-xl-8 col-lg-8 col-md-8 col-sm-8">
                     
-                            <input class="form_input_refund" type="text" for="bankSelect" id="bankName" placeholder="Bank Name-Required"></input>
+                            <input class="form_input" type="text" for="bankSelect" id="bankName" placeholder="Bank Name-Required"></input>
                             
                         </div>
                         <div class="clearfix visible-xs"></div>
                         <div class="clearfix visible-xs"></div>
-                        <div className="col-6"></div>
-                        <div className="col-6">
-                            <select class="formBankOptionRefund" id="bankSelect" for="bankName" value={this.state.selectedBank} onChange={this.handleBankSelect}>
+                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6"></div>
+                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                            <select class="form_bank_optionRefund" id="bankSelect" for="bankName" value={this.state.selectedBank} onChange={this.handleBankSelect}>
                                 <option value="1">Bank Of Ceylon</option>
                                 <option value="2">Commercial Bank</option>
                                 <option value="3">Nations Trust Bank</option>
@@ -196,18 +224,18 @@ class BankRefund extends Component {
                         
                     </div>
                     <hr/>
-                    <div className="row rowClassRefund">
-                        <div className="col-4">
-                            <label for="refRem" className="labelClassRefund">REFUND REMARKS</label>
+                    <div className="row rowRefundRequest">
+                        <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                            <label for="refRem" className="labelRefund">REFUND REMARKS</label>
                         </div>
-                        <div className="col-8">
-                            <input class="form_input_refund" type="text" id="refRem" placeholder="Refund Remarks-Optional"></input>
+                        <div className="col-xl-8 col-lg-8 col-md-8 col-sm-8">
+                            <input class="form_input" type="text" id="refRem" placeholder="Refund Remarks-Optional"></input>
                         </div>
                     </div>
                     <hr/>
                     
 
-                    <button type="submit" className="btn btn-lg btn-primary btnRefund"  onClick={this.validate}>Submit</button>
+                    <button type="submit" className="btn btn-lg btn-primary refundRequestButtons" onClick={this.validate}>Submit</button>
                 </div>
             
                 {/* Submit Success Dialog */}
@@ -224,7 +252,7 @@ class BankRefund extends Component {
                                 Successfully Submitted!
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-success btnRefund" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
@@ -243,7 +271,7 @@ class BankRefund extends Component {
                                 Validation Failed!
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-danger btnRefund" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-danger"  data-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>

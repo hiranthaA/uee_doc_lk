@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import "./refundrequest.css";
 
 class MobileRefund extends Component {
@@ -11,6 +10,9 @@ class MobileRefund extends Component {
             clicked:"FALSE"
         }
     }
+    /**
+     * Input validator
+     */
     validate(){
         var validated = false;
         if(this.refValidate() & this.mobileNumValidate()){
@@ -54,7 +56,9 @@ class MobileRefund extends Component {
             
         }
     }
-
+    /**
+     * Show popup
+     */
     popupShow() {
         var popup = document.getElementById("helpTip");
         popup.classList.toggle("show");
@@ -68,8 +72,11 @@ class MobileRefund extends Component {
     componentDidMount(e){
         this.progress();
     }
+    /**
+     * Success progress bar
+     */
     progress() {
-        var elem = document.getElementById("refundProgressBar"); 
+        var elem = document.getElementById("myBar"); 
         var width = 10;
         var id = setInterval(frame, 1);
         function frame() {
@@ -83,10 +90,13 @@ class MobileRefund extends Component {
             }
         }
     }
+    /**
+     * Error progress bar
+     */
     progressError() {
-        var elem = document.getElementById("refundProgressBar"); 
+        var elem = document.getElementById("myBar"); 
         var width = 10;
-        var id = setInterval(frame, 1);
+        var id = setInterval(frame, 0.5);
         function frame() {
             if (width >= 100) {
                 clearInterval(id);
@@ -104,7 +114,7 @@ class MobileRefund extends Component {
         return ( 
             <div className="card h-100 border-danger" >
                 {/*Top Header*/}
-                <div className="row typeHeaderRefund card-header bg-danger text-white" >
+                <div className="row typeHeader card-header bg-danger text-white rowRefundRequest" >
                     
                     <div className="col-sm-12">
                         <h2>Mobile Bill / Reload Refund</h2>
@@ -113,24 +123,24 @@ class MobileRefund extends Component {
                 <br/>
                 {/*Content Form*/}
                 <div className="card-body">
-                    <div className="row ">
-                        <div className="col-4">
-                            <label for="refID" className="labelClassRefund">REFERENCE NO<font color="red">*</font></label>
+                    <div className="row rowRefundRequest">
+                        <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                            <label for="refID" className="labelRefund">REFERENCE NO<font color="red">*</font></label>
                         </div>
-                        <div className="col-8">
-                            <input class="form_input_refund" type="text" id="refID" placeholder="Reference No-Required"></input>
+                        <div className="col-xl-8 col-lg-8 col-md-8 col-sm-8">
+                            <input class="form_input" type="text" id="refID" placeholder="Reference No-Required"></input>
                         </div>
                     </div>
                     <hr/>
 
-                    <div className="row">
-                        <div className="col-4">
-                            <label for="mobileNum" className="labelClassRefund">MOBILE NO / CDMA NO<font color="red">*</font></label>
+                    <div className="row rowRefundRequest" >
+                        <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                            <label for="mobileNum" className="labelRefund">MOBILE NO / CDMA NO<font color="red">*</font></label>
                         </div>
-                        <div className="col-8">
+                        <div className="col-xl-8 col-lg-8 col-md-8 col-sm-8">
                             <div className="flexContainerRefund">
                                 <input class="inputFlexRefund" type="text" id="mobileNum" placeholder="Mobile No/CDMA No-Required"></input>
-                                <button className="roundBtnRefund tooltipRefund" onClick={this.popupShow} id="infoMob">?<span className="tooltipRefundText" id="helpTip"><p><font size="5px">This service is available for
+                                <button className="roundBtnRefund tooltip" onClick={this.popupShow} id="infoMob">?<span className="tooltiptext" id="helpTip"><p><font size="5px">This service is available for
                                                     <hr/><small>
                                                     <ul>
                                                     <li>Dialog Mobile/ Dialog CDMA</li>
@@ -149,18 +159,18 @@ class MobileRefund extends Component {
                     </div>
                     <hr/>
                     
-                    <div className="row">
-                        <div className="col-4">
-                            <label for="refRem" className="labelClassRefund">REFUND REMARKS</label>
+                    <div className="row rowRefundRequest">
+                        <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                            <label for="refRem" className="labelRefund">REFUND REMARKS</label>
                         </div>
-                        <div className="col-8">
-                            <input class="form_input_refund" type="text" id="refRem" placeholder="Refund Remarks-Optional"></input>
+                        <div className="col-xl-8 col-lg-8 col-md-8 col-sm-8">
+                            <input class="form_input" type="text" id="refRem" placeholder="Refund Remarks-Optional"></input>
                         </div>
                     </div>
                     
                     <hr/>
                     <br/><br/><br/><br/><br/><br/>
-                    <button type="submit" className="btn btn-lg btn-primary btnRefund" onClick={this.validate}>Submit</button>
+                    <button type="submit" className="btn btn-lg btn-primary refundRequestButtons" onClick={this.validate}>Submit</button>
                 </div>
 
                 {/* Submit Success Dialog */}
@@ -177,7 +187,7 @@ class MobileRefund extends Component {
                                 Successfully Submitted!
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-success btnRefund" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
@@ -196,7 +206,7 @@ class MobileRefund extends Component {
                                 Validation Failed!
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-danger btnRefund" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>

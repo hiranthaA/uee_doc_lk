@@ -1,18 +1,25 @@
-.labelClassRefund{
+.labelRefund{
     width:100%;
     text-align: left;
-
 }
-.headClassRefund{
+.headRefund{
     padding-left: 15px;
-    background-color: rgba(167, 179, 0, 0.671);
     height: 50px;
+    
 }
+.refund .card {
+    background-color:#f8f9fa;
+}
+.refund .card-body {
+    background-color:#f8f9fa;
+}
+
 .headBtnRefund{
     background-color:rgba(0, 255, 136, 0.568);
 
 }
-.btnRefund{
+
+.refundRequestButtons {
     padding: .5rem 1rem;
     font-size: 1.25rem;
     line-height: 1.5;
@@ -20,25 +27,25 @@
     align-self: center;
     width: 50%;
 }
-.typeHeaderRefund{
+.typeHeader{
     color:red;
     background-color: antiquewhite;
 }
-.form_letter_refund{
+.form_letter{
     font-size:180px;
 }
-.rowClassRefund{
+.rowRefundRequest{
     margin-left: 0;
     margin-right: 0;
 }
-.form_option_Refund{  
+.form_optionRefund{  
     text-align: center;
     display: block;
     width: 100%;
     border-radius: 10px;
     height: 2rem;
 }
-.formBankOptionRefund{
+.form_bank_optionRefund{
 
     text-align: center;
     display: block;
@@ -49,7 +56,7 @@
 }
 
 
-.roundBtnRefund{
+.roundBtnRefund{    
     -webkit-appearance:caret;
     position:absolute;
     top: 2px;
@@ -100,19 +107,22 @@
     flex:1;
     display: block;
     width: 100%;
+    height:35px;
     border-radius: 5px;
     padding-left: 15px;
 }
 
-.form_input_refund{
+.form_input{
     display: block;
     width: 100%;
+    height:35px;
     border-radius: 5px;
     padding-left: 15px;
+    font-size: 1rem;
 }
 
 /* Popup container */
-.popupRefund {
+.popup {
     position: relative;
     display: inline-block;
     cursor: help;
@@ -121,7 +131,7 @@
 }
 
 /* The actual popup (appears on top) */
-.popupRefund .popupRefundText {
+.popup .popuptext {
     visibility: hidden;
     width: 300px;
     background-color: rgba(243, 255, 177, 0.952);
@@ -137,7 +147,7 @@
 }
 
 /* Popup arrow */
-.popupRefund .popupRefundText::after {
+.popup .popuptext::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -150,27 +160,29 @@
 }
 
 /* Toggle this class when clicking on the popup container (hide and show the popup) */
-.popupRefund .show {
+.popup .show {
     visibility: visible;
-    -webkit-animation: fadeInRefund 1s;
-    animation: fadeInRefund 1s;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
     border-radius: 10px;
+}
+.refund{
 }
 
 /* Add animation (fade in the popup) */
-@-webkit-keyframes fadeInRefund {
+@-webkit-keyframes fadeIn {
     from {opacity: 0;} 
     to {opacity: 1;}
 }
 
-@keyframes fadeInRefund {
+@keyframes fadeIn {
     from {opacity: 0;}
     to {opacity:1 ;}
 }
 
 
  /* Tooltip container */
-.tooltipRefund {
+.tooltip {
     position: relative;
     display: inline-block;
     border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
@@ -179,7 +191,7 @@
 }
 
 /* Tooltip text */
-.tooltipRefund .tooltipRefundText {
+.tooltip .tooltiptext {
     visibility: hidden;
     width: 150vd;
     background-color: rgb(1, 15, 27);
@@ -202,7 +214,7 @@
 }
 
 /* Tooltip arrow */
-.tooltipRefund .tooltipRefundText::after {
+.tooltip .tooltiptext::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -214,20 +226,20 @@
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
-.tooltipRefund:hover .tooltipRefundText {
+.tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
 }
 
 
 
-.form_RefundOption_mobile{
+.form_option_mobileRefund{
     
     position: relative;
     font-family: Arial;
 }
 
-.form_RefundOption_mobile select{
+.form_option_mobileRefund select{
     display:block;
     width:100%;
     color: rgba(0, 0, 0, 0.89);
@@ -236,7 +248,7 @@
     padding: 15px;
     
 }
-.form_RefundOption_mobile select option{
+.form_option_mobileRefund select option{
     width: 1px;
     tab-size: 4px;
     color: #ffffff;
@@ -256,23 +268,23 @@
     border-radius: 15px;
     
 }
-.fixRefund{
+.fix{
     width: 100%;
     margin-left: 0;
 }
-#refundProgressBar {
+#myBar {
     width: 10%;
-    height: 30px;
+    height: 15px;
     background-color: #4CAF50;
     text-align: center; /* To center it horizontally (if you want) */
-    line-height: 30px; /* To center it vertically */
+    line-height: 15px; /* To center it vertically */
     color: white; 
 }
-.select-selected-Refund {
+.select-selected {
     background-color: rgba(0, 22, 44, 0.808);
   }
   /*style the arrow inside the select element:*/
-  .select-selected-Refund:after {
+  .select-selected:after {
     position: absolute;
     content: "";
     top: 14px;
@@ -283,12 +295,12 @@
     border-color: #fff transparent transparent transparent;
   }
   /*point the arrow upwards when the select box is open (active):*/
-  .select-selected-Refund .select-arrow-active:after {
+  .select-selected.select-arrow-active:after {
     border-color: transparent transparent #fff transparent;
     top: 7px;
   }
   /*style the items (options), including the selected item:*/
-  .select-items-Refund div,.select-selected-Refund {
+  .select-items div,.select-selected {
     color: #ffffff;
     padding: 8px 16px;
     border: 1px solid transparent;
@@ -296,7 +308,7 @@
     cursor: pointer;
   }
   /*style items (options):*/
-  .select-items-Refund {
+  .select-items {
     position: absolute;
     background-color: DodgerBlue;
     top: 100%;
@@ -306,60 +318,71 @@
     z-index: 99;
   }
   /*hide the items when the select box is closed:*/
-  .select-hide-refund {
+  .select-hide {
     display: none;
   }
-  .select-items-Refund div:hover, .same-as-selected {
+  .select-items div:hover, .same-as-selected {
     background-color: rgba(0, 0, 0, 0.1);
   }
 
 @media not all and (min-width: 620px)  {
-    .form_letter_refund{
+    .form_letter{
         font-size:120px;
     }
-     .form_option_Refund{
+     .form_optionRefund{
         display: none;
     }
-    .formBankOptionRefund{
+    .form_bank_optionRefund{
         font-size: 12px;
         
     }
-    .fixRefund{
-        width: 185px;
-        margin-left: -10px;
+    .wrapper{
+        display: none;
+    }
+    .wrapped{
+        display: flex;
+        height:50px
+    }
+    .fix{
+        width: 109%;
+        margin-left: -16px;
     }
     .inputFlexRefund{
         font-size: 12px;
+        height:35px;
     }
-    .form_input_refund{
+    .form_input{
         font-size: 12px;
     }
-    .labelClassRefund{
+    .labelRefund{
         font-size: 10px;
     }
     
 
 }
 @media not all and (max-width: 620px)  {
-    .form_letter_mobileRefund{
+    .form_letter_mobile{
         font-size:.8rem;
     }
     
-    .form_RefundOption_mobile{
+     .form_option_mobileRefund{
         display: none;
     }
-    .fixRefund{
-        
+    .fix{
+        margin-left: 15px;
     }
-    .form_input_refund{
+    .form_input{
         font-size: inherit;
     }
-    .formBankOptionRefund{
+    .wrapper{
+        display: flex;
+    }
+    .wrapped{
+        display: none;
+    }
+    .form_bank_optionRefund{
         font-size: 18px;
         height:30px
-    }
-    .radioRefund{
-        font-size: 13px;
     }
 
 }
