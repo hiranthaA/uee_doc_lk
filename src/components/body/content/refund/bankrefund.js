@@ -9,6 +9,9 @@ class BankRefund extends Component {
             selectedBank:"1"
         }
     }
+    /**
+     * Input validation method
+     */
     validate(){
         var validated = false;
         if(this.refValidate() & this.holdValidate() & this.accValidate() & this.bankValidate()){
@@ -105,6 +108,9 @@ class BankRefund extends Component {
             document.getElementById("bankName").value="National Savings Bank";
         }
     }
+    /**
+     * Success progress bar
+     */
     progress() {
         var elem = document.getElementById("myBar"); 
         var width = 10;
@@ -120,10 +126,13 @@ class BankRefund extends Component {
             }
         }
     }
+    /**
+     * Error progress bar
+     */
     progressError() {
         var elem = document.getElementById("myBar"); 
         var width = 10;
-        var id = setInterval(frame, 1);
+        var id = setInterval(frame, 0.5);
         function frame() {
             if (width >= 100) {
                 clearInterval(id);
@@ -135,9 +144,15 @@ class BankRefund extends Component {
             }
         }
     }
+    /**
+     * Text area controlled
+     */
     fillArea(){
         document.getElementById("holderName2").value = document.getElementById("holderName").value;
     }
+    /**
+     * Text input controlled
+     */
     fillInput(){
         document.getElementById("holderName").value = document.getElementById("holderName2").value;
     }

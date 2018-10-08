@@ -10,6 +10,9 @@ class MobileRefund extends Component {
             clicked:"FALSE"
         }
     }
+    /**
+     * Input validator
+     */
     validate(){
         var validated = false;
         if(this.refValidate() & this.mobileNumValidate()){
@@ -53,7 +56,9 @@ class MobileRefund extends Component {
             
         }
     }
-
+    /**
+     * Show popup
+     */
     popupShow() {
         var popup = document.getElementById("helpTip");
         popup.classList.toggle("show");
@@ -67,6 +72,9 @@ class MobileRefund extends Component {
     componentDidMount(e){
         this.progress();
     }
+    /**
+     * Success progress bar
+     */
     progress() {
         var elem = document.getElementById("myBar"); 
         var width = 10;
@@ -82,10 +90,13 @@ class MobileRefund extends Component {
             }
         }
     }
+    /**
+     * Error progress bar
+     */
     progressError() {
         var elem = document.getElementById("myBar"); 
         var width = 10;
-        var id = setInterval(frame, 1);
+        var id = setInterval(frame, 0.5);
         function frame() {
             if (width >= 100) {
                 clearInterval(id);

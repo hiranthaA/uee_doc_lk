@@ -11,12 +11,19 @@ class RefundSearch extends Component {
             selectedOption:"nic"
         }
     }
+    /**
+     * Controls the state  of Bank dropdown
+     * @param {HTMLSelectElement} e 
+     */
     handleBankSelect(e){
 
         console.log("Bank "+e.target.value +" :Selected");
         this.setState({ clicked: e.target.value });
       
     }
+    /**
+     * Input validator
+     */
     validate(){
         var validated = false;
         if(this.refValidate() & this.NICpassportValidate()){
@@ -48,6 +55,9 @@ class RefundSearch extends Component {
     componentDidMount(e){
         this.progress();
     }
+    /**
+     * Success progress bar
+     */
     progress() {
         var elem = document.getElementById("myBar"); 
         var width = 10;
@@ -63,10 +73,13 @@ class RefundSearch extends Component {
             }
         }
     }
+    /**
+     * Error progress bar
+     */
     progressError() {
         var elem = document.getElementById("myBar"); 
         var width = 10;
-        var id = setInterval(frame, 1);
+        var id = setInterval(frame, 0.5);
         function frame() {
             if (width >= 100) {
                 clearInterval(id);
@@ -78,6 +91,10 @@ class RefundSearch extends Component {
             }
         }
     }
+    /**
+     * Controls input Radio group state
+     * @param {HTMLInputElement} e 
+     */
     selectRadio(e){
         console.log(e.target.id);
         if(e.target.id==="nicRadio"){

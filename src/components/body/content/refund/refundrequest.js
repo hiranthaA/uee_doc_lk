@@ -17,6 +17,10 @@ class RefundRequest extends Component {
         }
     
     }
+    /**
+     * Dropdown shows for mobile UI
+     * @param {HTMLSelectComponent} e 
+     */
     loadRefundOptions(e){
 
         console.log("Loaded form:"+e.target.name);
@@ -35,7 +39,9 @@ class RefundRequest extends Component {
         }
     }
 
-
+    /**
+     * Popup show
+     */
     popupShow(){
         var popup = document.getElementById("infoPopup");
         popup.classList.toggle("show");
@@ -45,10 +51,13 @@ class RefundRequest extends Component {
         let form = this.state.refundOption;
         document.getElementById("form_ref_opt").value= form;
     }
+    /**
+     * Progress bar for component load
+     */
     progress() {
         var elem = document.getElementById("myBar"); 
         var width = 10;
-        var id = setInterval(frame, 1);
+        var id = setInterval(frame, 0.7);
         function frame() {
             if (width >= 100) {
                 clearInterval(id);
@@ -61,7 +70,10 @@ class RefundRequest extends Component {
         }
     }
 
-    
+    /**
+     * Controls stae of dropdown
+     * @param {HTMLSelectElement} e 
+     */
     handleFormSelect(e){
         this.setState({refundOption: e.target.value});
     }
