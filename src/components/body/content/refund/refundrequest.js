@@ -144,8 +144,8 @@ class RefundRequest extends Component {
                         <div class="popup">
                                         <img src="./info.png" width="50px" height='50px'></img>
                                         <span className="popuptext" id="infoPopup"><p>
-                                        "Your refund will be arranged to the same payment mode used for making the appointment" 
-                                <hr/>Example - Mobile bill/Reload refund will be arranged for Add to bill transactions and bank deposits for card payment transactions.
+                                        "Your refund will be arranged to the same payment mode used for making the appointment" </p>
+                                <hr/><p>Example - Mobile bill/Reload refund will be arranged for Add to bill transactions and bank deposits for card payment transactions.
                                             </p></span>
                         </div>
                 </div> 
