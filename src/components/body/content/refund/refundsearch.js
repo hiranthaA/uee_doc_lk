@@ -156,7 +156,7 @@ class RefundSearch extends Component {
                             </div>
                         </div>
                         <div className="col-xl-8 col-lg-8 col-md-8 col-sm-8">
-                            <div class="rowrowRefundRequest">
+                            <div class="row rowRefundRequest">
                                 <div className="col-xl-3 col-lg-3 col-md-3 col-sm-3">
                                     <div class="row rowRefundRequest">
                 
