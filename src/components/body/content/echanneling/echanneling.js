@@ -113,15 +113,12 @@ class Echanneling extends Component {
                                     <button type="button" class="btn btn-sm btn-success btn-block search-btn-padding"><i class="fas fa-search"></i> Search</button>
                                 </div>
                             </div>
-
-
+                            
                             <div class="row p-2">
-                                <div class="col-4">
-                                    <div class="mt-3 city-wise text-left">
-                                        <h6 class="p-2 m-2 ">
-                                            <b>City wise availability</b>
-                                        </h6>
-                                        <ul class="list-group p-2">
+                                <div class="col-4 availability">
+                                    <div class="mt-2 city-wise text-left">
+                                            <b className=" title">City wise availability</b>
+                                        <ul class="list-group res-ul p-2">
                                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                                 Nugegoda
                                              <span class="badge badge-primary badge-pill">14</span>
@@ -145,14 +142,14 @@ class Echanneling extends Component {
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-8">
-                                    <div class="mt-3 city-wise">
+                                <div class="col-8 availability">
+                                    <div class="mt-2 city-wise">
                                         <div class="row p-2">
-                                            <div class="col-5 m-2 text-right">
-                                                <h6><b>Search Results</b></h6>
+                                            <div class="col-5 title text-right">
+                                                <b className="title">Search Results</b>
                                             </div>
                                             <div class="col-5 text-left">
-                                                <select id="inputState" class="form-control form-control-sm">
+                                                <select id="inputState" class="form-control sort form-control-sm">
                                                     <option selected>Sort Results..</option>
                                                     <option>By Doctor Name</option>
                                                     <option>Channeling Center</option>
@@ -162,7 +159,7 @@ class Echanneling extends Component {
                                                     <option>District</option>
                                                 </select>
                                             </div>
-                                            <hr />
+
                                         </div>
                                         <div class="row text-center">
                                             <div class="col-12">
@@ -173,17 +170,17 @@ class Echanneling extends Component {
                                                                 <img className="img-thumbnail img-responsive" src="./icon-doctor.png" alt="No image" />
                                                             </div>
                                                             <div className="col-9 text-left">
-                                                                <h5>Dr. SAMAN KULARATHNE</h5>
-                                                                <p className="mb-0">Chest Specialist</p>
-                                                                <p className="mb-0">General Hospital Kurunegala</p>
-                                                                <div className="big-star p-2">
+                                                                <h5 className="doc-title">Dr. SAMAN KULARATHNE</h5>
+                                                                <p className="mb-0 doc-sub">Chest Specialist</p>
+                                                                <p className="mb-0 doc-sub">General Hospital Kurunegala</p>
+                                                                <div className="big-star rating-div rating p-2">
                                                                     <span class="fa fa-star checked"></span>
                                                                     <span class="fa fa-star checked"></span>
                                                                     <span class="fa fa-star checked"></span>
                                                                     <span class="fa fa-star checked"></span>
                                                                     <span class="fa fa-star unchecked"></span>
                                                                 </div>
-                                                                <button type="button" class="btn btn-block btn-danger" data-toggle="modal" data-target="#exampleModalCenter"><i class="far fa-check-circle"></i> Channel</button>
+                                                                <button type="button" class="btn sort btn-block btn-danger" data-toggle="modal" data-target="#exampleModalCenter"><i class="far fa-check-circle"></i> Channel</button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -199,17 +196,17 @@ class Echanneling extends Component {
                                                                 <img className="img-thumbnail img-responsive" src="./icon-doctor.png" alt="No image" />
                                                             </div>
                                                             <div className="col-9 text-left">
-                                                                <h5>Dr. SAMAN WEERAWARDHANE</h5>
-                                                                <p className="mb-0">Psychiatrist</p>
-                                                                <p className="mb-0">General Hospital Negombo</p>
-                                                                <div className="big-star p-2">
+                                                                <h5 className="doc-title">Dr. SAMAN WEERAWARDHANE</h5>
+                                                                <p className="mb-0 doc-sub">Psychiatrist</p>
+                                                                <p className="mb-0 doc-sub">General Hospital Negombo</p>
+                                                                <div className="big-star rating-div rating p-2">
                                                                     <span class="fa fa-star checked"></span>
                                                                     <span class="fa fa-star checked"></span>
                                                                     <span class="fa fa-star checked"></span>
                                                                     <span class="fa fa-star checked"></span>
                                                                     <span class="fa fa-star unchecked"></span>
                                                                 </div>
-                                                                <button type="button" class="btn btn-block btn-danger" data-toggle="modal" data-target="#exampleModalCenter"><i class="far fa-check-circle"></i> Channel</button>
+                                                                <button type="button" class="btn sort btn-block btn-danger" data-toggle="modal" data-target="#exampleModalCenter"><i class="far fa-check-circle"></i> Channel</button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -225,17 +222,17 @@ class Echanneling extends Component {
                                                                 <img className="img-thumbnail img-responsive" src="./icon-doctor.png" alt="No image" />
                                                             </div>
                                                             <div className="col-9 text-left">
-                                                                <h5>Dr (Mrs.) SAMANTHI PARANAVITHANE</h5>
-                                                                <p className="mb-0">Dermatologist</p>
-                                                                <p className="mb-0">General Hospital Anuradhapura</p>
-                                                                <div className="big-star p-2">
+                                                                <h5 className="doc-title">Dr (Mrs.) SAMANTHI PARANAVITHANE</h5>
+                                                                <p className="mb-0 doc-sub">Dermatologist</p>
+                                                                <p className="mb-0 doc-sub">General Hospital Anuradhapura</p>
+                                                                <div className="big-star rating-div rating p-2">
                                                                     <span class="fa fa-star checked"></span>
                                                                     <span class="fa fa-star checked"></span>
                                                                     <span class="fa fa-star checked"></span>
                                                                     <span class="fa fa-star checked"></span>
                                                                     <span class="fa fa-star unchecked"></span>
                                                                 </div>
-                                                                <button type="button" class="btn btn-block btn-danger" data-toggle="modal" data-target="#exampleModalCenter"><i class="far fa-check-circle"></i> Channel</button>
+                                                                <button type="button" class="btn sort btn-block btn-danger" data-toggle="modal" data-target="#exampleModalCenter"><i class="far fa-check-circle"></i> Channel</button>
                                                             </div>
                                                         </div>
                                                     </div>
