@@ -92,10 +92,10 @@ class RefundRequest extends Component {
       
         return ( 
             <div className="refund">
-                {/*Top Header*/}
-                <div className="row">
+                {/*Top Header*/} 
+                <div className="row rowRefundRequest">
                 
-                    <div className="col head">
+                    <div className="col headRefund">
                         <h2><font size="100%">Refund Request</font></h2>
                     </div>
                 </div>
@@ -105,27 +105,27 @@ class RefundRequest extends Component {
                 </div>
                 <br/>
                 {/*Button Content*/}
-                <div className="row">
+                <div className="row rowRefundRequest">
                     <div className="col">
                     {/* Desktop Form Options */}
-                        <div class="form_option" >
-                            <div className="row">
+                        <div class="form_optionRefund" >
+                            <div className="row rowRefundRequest">
                                 <div className="col">
-                                            <button type="button" className="btn btn-block headBtn" id="bnkBtn" name="Bank Refund" onClick={this.loadRefundOptions}>Bank Refund</button>
+                                            <button type="button" className="btn btn-block headBtnRefund" id="bnkBtn" name="Bank Refund" onClick={this.loadRefundOptions}>Bank Refund</button>
                                 </div>
                                 <br/><br/>  
                                 <div className="col">
-                                            <button type="button" className="btn btn-block headBtn" id="mblBtn" name="Mobile Refund" onClick={this.loadRefundOptions}>Mobile Bill/Reload Refund</button>
+                                            <button type="button" className="btn btn-block headBtnRefund" id="mblBtn" name="Mobile Refund" onClick={this.loadRefundOptions}>Mobile Bill/Reload Refund</button>
                                 </div>
                                 <br/><br/>     
                                 <div className="col">
-                                            <button type="button" className="btn btn-block headBtn" id="srchBtn" name="Refund Search" onClick={this.loadRefundOptions}>Refund Search</button>                        
+                                            <button type="button" className="btn btn-block headBtnRefund" id="srchBtn" name="Refund Search" onClick={this.loadRefundOptions}>Refund Search</button>                        
                                         
                                 </div>
                             </div>
                         </div>
                         {/*Mobile Form Options*/}
-                        <div class="form_option_mobile">
+                        <div class="form_option_mobileRefund">
                             <select value={this.state.formoption} id="form_ref_opt" onChange={this.handleFormSelect}>
                                 <option value="bank" >Bank Refund</option>
                                 <option value="mobile" >Mobile Bill/Reload Refund</option>
@@ -138,7 +138,7 @@ class RefundRequest extends Component {
                 </div>
                <hr/>
                {formoption}
-               <div className="row">
+               <div className="row rowRefundRequest">
                <div className="col-9"></div>
                 <div className="col-1"  onClick={this.popupShow}>
                         <div class="popup">

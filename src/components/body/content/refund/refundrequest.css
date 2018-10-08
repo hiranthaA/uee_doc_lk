@@ -1,8 +1,8 @@
-label{
+.labelRefund{
     width:100%;
     text-align: left;
 }
-.head{
+.headRefund{
     padding-left: 15px;
     height: 50px;
     
@@ -13,12 +13,13 @@ label{
 .refund .card-body {
     background-color:#f8f9fa;
 }
-.headBtn{
+
+.headBtnRefund{
     background-color:rgba(0, 255, 136, 0.568);
 
 }
 
-.btn-group-lg>.btn, .btn-lg {
+.refundRequestButtons {
     padding: .5rem 1rem;
     font-size: 1.25rem;
     line-height: 1.5;
@@ -33,18 +34,18 @@ label{
 .form_letter{
     font-size:180px;
 }
-.row{
+.rowRefundRequest{
     margin-left: 0;
     margin-right: 0;
 }
-.form_option{  
+.form_optionRefund{  
     text-align: center;
     display: block;
     width: 100%;
     border-radius: 10px;
     height: 2rem;
 }
-.form_bank_option{
+.form_bank_optionRefund{
 
     text-align: center;
     display: block;
@@ -55,7 +56,7 @@ label{
 }
 
 
-.roundBtn{
+.roundBtnRefund{    
     -webkit-appearance:caret;
     position:absolute;
     top: 2px;
@@ -72,7 +73,7 @@ label{
     background-color: cornflowerblue
 }
 
-.roundIcon{
+.roundIconRefund{
 
 
     position:absolute;
@@ -88,7 +89,7 @@ label{
 
 }
 
-.flexContainer{
+.flexContainerRefund{
     display: flex;
     outline: none; 
     text-align: center; 
@@ -97,12 +98,12 @@ label{
     position: relative;
 }
 
-.radioText{
+.radioTextRefund{
     
     width:100px;
 }
 
-.inputFlex{
+.inputFlexRefund{
     flex:1;
     display: block;
     width: 100%;
@@ -232,13 +233,13 @@ label{
 
 
 
-.form_option_mobile{
+.form_option_mobileRefund{
     
     position: relative;
     font-family: Arial;
 }
 
-.form_option_mobile select{
+.form_option_mobileRefund select{
     display:block;
     width:100%;
     color: rgba(0, 0, 0, 0.89);
@@ -247,7 +248,7 @@ label{
     padding: 15px;
     
 }
-.form_option_mobile select option{
+.form_option_mobileRefund select option{
     width: 1px;
     tab-size: 4px;
     color: #ffffff;
@@ -328,10 +329,10 @@ label{
     .form_letter{
         font-size:120px;
     }
-     .form_option{
+     .form_optionRefund{
         display: none;
     }
-    .form_bank_option{
+    .form_bank_optionRefund{
         font-size: 12px;
         
     }
@@ -346,14 +347,14 @@ label{
         width: 109%;
         margin-left: -16px;
     }
-    .inputFlex{
+    .inputFlexRefund{
         font-size: 12px;
         height:35px;
     }
     .form_input{
         font-size: 12px;
     }
-    label{
+    .labelRefund{
         font-size: 10px;
     }
     
@@ -364,7 +365,7 @@ label{
         font-size:.8rem;
     }
     
-     .form_option_mobile{
+     .form_option_mobileRefund{
         display: none;
     }
     .fix{
@@ -379,7 +380,7 @@ label{
     .wrapped{
         display: none;
     }
-    .form_bank_option{
+    .form_bank_optionRefund{
         font-size: 18px;
         height:30px
     }
