@@ -114,7 +114,7 @@ class MobileRefund extends Component {
         return ( 
             <div className="card h-100 border-danger" >
                 {/*Top Header*/}
-                <div className="row typeHeader card-header bg-danger text-white" >
+                <div className="row typeHeader card-header bg-danger text-white rowRefundRequest" >
                     
                     <div className="col-sm-12">
                         <h2>Mobile Bill / Reload Refund</h2>
@@ -123,9 +123,9 @@ class MobileRefund extends Component {
                 <br/>
                 {/*Content Form*/}
                 <div className="card-body">
-                    <div className="row ">
+                    <div className="row rowRefundRequest">
                         <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4">
-                            <label for="refID">REFERENCE NO<font color="red">*</font></label>
+                            <label for="refID" className="labelRefund">REFERENCE NO<font color="red">*</font></label>
                         </div>
                         <div className="col-xl-8 col-lg-8 col-md-8 col-sm-8">
                             <input class="form_input" type="text" id="refID" placeholder="Reference No-Required"></input>
@@ -133,14 +133,14 @@ class MobileRefund extends Component {
                     </div>
                     <hr/>
 
-                    <div className="row">
+                    <div className="row rowRefundRequest" >
                         <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4">
-                            <label for="mobileNum">MOBILE NO / CDMA NO<font color="red">*</font></label>
+                            <label for="mobileNum" className="labelRefund">MOBILE NO / CDMA NO<font color="red">*</font></label>
                         </div>
                         <div className="col-xl-8 col-lg-8 col-md-8 col-sm-8">
-                            <div className="flexContainer">
-                                <input class="inputFlex" type="text" id="mobileNum" placeholder="Mobile No/CDMA No-Required"></input>
-                                <button className="roundBtn tooltip" onClick={this.popupShow} id="infoMob">?<span className="tooltiptext" id="helpTip"><p><font size="5px">This service is available for
+                            <div className="flexContainerRefund">
+                                <input class="inputFlexRefund" type="text" id="mobileNum" placeholder="Mobile No/CDMA No-Required"></input>
+                                <button className="roundBtnRefund tooltip" onClick={this.popupShow} id="infoMob">?<span className="tooltiptext" id="helpTip"><p><font size="5px">This service is available for
                                                     <hr/><small>
                                                     <ul>
                                                     <li>Dialog Mobile/ Dialog CDMA</li>
@@ -159,9 +159,9 @@ class MobileRefund extends Component {
                     </div>
                     <hr/>
                     
-                    <div className="row">
+                    <div className="row rowRefundRequest">
                         <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4">
-                            <label for="refRem">REFUND REMARKS</label>
+                            <label for="refRem" className="labelRefund">REFUND REMARKS</label>
                         </div>
                         <div className="col-xl-8 col-lg-8 col-md-8 col-sm-8">
                             <input class="form_input" type="text" id="refRem" placeholder="Refund Remarks-Optional"></input>
@@ -170,7 +170,7 @@ class MobileRefund extends Component {
                     
                     <hr/>
                     <br/><br/><br/><br/><br/><br/>
-                    <button type="submit" className="btn btn-lg btn-primary" onClick={this.validate}>Submit</button>
+                    <button type="submit" className="btn btn-lg btn-primary refundRequestButtons" onClick={this.validate}>Submit</button>
                 </div>
 
                 {/* Submit Success Dialog */}
